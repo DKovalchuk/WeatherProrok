@@ -7,6 +7,8 @@ using System.Configuration;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
+using HtmlAgilityPack;
+using WeatherProrok.Logic.Helpers;
 
 namespace WeatherProrok.Logic.Providers
 {
@@ -36,11 +38,12 @@ namespace WeatherProrok.Logic.Providers
 
         public CurrentWeatherModel GetCurrentWeatherByCityID(string cityId)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
 
             var url = string.Format("{0}/city/daily/{1}", GismeteoRootURL, cityId);
 
-
+            var responce = MakeRequest(url);
+            return ParseCurrentWeather(responce);
         }
 
         public async Task<CurrentWeatherModel> GetCurrentWeatherByCityIDAsync(string cityId)
@@ -98,6 +101,67 @@ namespace WeatherProrok.Logic.Providers
             var responce = await request.GetResponseAsync();
             var responceStream = responce.GetResponseStream();
             return await new StreamReader(responceStream).ReadToEndAsync();
+        }
+
+        private CurrentWeatherModel ParseCurrentWeather(string data)
+        {
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(data);
+
+            /*var weather = doc.GetElementbyId("weather");
+            var fcontent = weather.ChildNodes.First(x => x.Attributes["class"].Value == "fcontent");
+            var section = fcontent.ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "section higher");*/
+
+            var content = doc.GetElementbyId("weather")
+                .ChildNodes.First(x => x.Attributes["class"].Value == "fcontent")
+                .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "section higher");
+
+            /*var divTemp = content.ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "temp");
+            var ddTemp = divTemp.ChildNodes.First(x => x.Name == "dd" && x.Attributes["class"].Value == "value m_temp c");
+            var t = int.Parse(ddTemp.ChildNodes.First(x => x.Name == "#text").InnerText);*/
+
+            int temp = int.Parse(content
+                .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "temp")
+                .ChildNodes.First(x => x.Name == "dd" && x.Attributes["class"].Value == "value m_temp c")
+                .ChildNodes.First(x => x.Name == "#text").InnerText);
+
+            /*var humidityDiv = content.ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "wicon hum");
+            int hum = int.Parse(humidityDiv.ChildNodes.First(x => x.Name == "#text").InnerText);*/
+
+            int humidity = int.Parse(content
+                .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "wicon hum")
+                .ChildNodes.First(x => x.Name == "#text").InnerText);
+
+            /*var cloudsDiv = content.ChildNodes.First(x => x.Name == "dl" && x.Attributes["class"].Value == "cloudness");
+            var dtClouds = cloudsDiv.ChildNodes.First(x => x.Name == "dt").Attributes["title"].Value;*/
+
+            var cloudsAndPrecipitation = content
+                .ChildNodes.First(x => x.Name == "dl" && x.Attributes["class"].Value == "cloudness")
+                .ChildNodes.First(x => x.Name == "dt").Attributes["title"].Value;
+
+            var clouds = string.Empty;
+            var precipitation = string.Empty;
+            if (cloudsAndPrecipitation.Contains(","))
+            {
+                var cp = cloudsAndPrecipitation.Split(',');
+                clouds = cp[0];
+                precipitation = cp[1];
+            }
+            else
+                clouds = cloudsAndPrecipitation;
+
+            var time = DateTime.Parse(content
+                .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "wrap f_link")
+                .ChildNodes.First(x => x.Name == "span" && x.Attributes["class"].Value == "icon date").Attributes["data-obs-time"].Value);
+
+            return new CurrentWeatherModel
+            {
+                Temp = temp,
+                Humidity = humidity,
+                Cloudity = GismeteoCloudsAndPrecipitationMappingHelper.MapCloudity(clouds),
+                Precipitation = GismeteoCloudsAndPrecipitationMappingHelper.MapPrecipitation(precipitation),
+                CurrentDateTime = time
+            };
         }
     }
 }

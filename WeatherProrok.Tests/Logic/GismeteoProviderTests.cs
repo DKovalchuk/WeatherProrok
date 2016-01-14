@@ -30,5 +30,14 @@ namespace WeatherProrok.Tests.Logic
             Assert.IsTrue(result.Any());
             Assert.IsTrue(result.Any(x => x.Name == "Николаев"));
         }
+
+        [TestMethod]
+        public void GetCurrentWeatherByCityIDTest()
+        {
+            var result = provider.GetCurrentWeatherByCityID("4983");
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Humidity >= 0);
+        }
     }
 }

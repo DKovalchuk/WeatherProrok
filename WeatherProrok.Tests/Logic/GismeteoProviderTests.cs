@@ -39,5 +39,14 @@ namespace WeatherProrok.Tests.Logic
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Humidity >= 0);
         }
+
+        [TestMethod]
+        public async Task GetCurrentWeatherByCityIDAsyncTest()
+        {
+            var result = await provider.GetCurrentWeatherByCityIDAsync("4983");
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Humidity >= 0);
+        }
     }
 }

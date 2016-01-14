@@ -38,8 +38,6 @@ namespace WeatherProrok.Logic.Providers
 
         public CurrentWeatherModel GetCurrentWeatherByCityID(string cityId)
         {
-            //throw new NotImplementedException();
-
             var url = string.Format("{0}/city/daily/{1}", GismeteoRootURL, cityId);
 
             var responce = MakeRequest(url);
@@ -48,7 +46,10 @@ namespace WeatherProrok.Logic.Providers
 
         public async Task<CurrentWeatherModel> GetCurrentWeatherByCityIDAsync(string cityId)
         {
-            throw new NotImplementedException();
+            var url = string.Format("{0}/city/daily/{1}", GismeteoRootURL, cityId);
+
+            var responce = await MakeRequestAsync(url);
+            return ParseCurrentWeather(responce);
         }
 
         public CurrentWeatherModel GetCurrentWeatherByCoordinates(double latitude, double longitude)
@@ -108,32 +109,18 @@ namespace WeatherProrok.Logic.Providers
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(data);
 
-            /*var weather = doc.GetElementbyId("weather");
-            var fcontent = weather.ChildNodes.First(x => x.Attributes["class"].Value == "fcontent");
-            var section = fcontent.ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "section higher");*/
-
             var content = doc.GetElementbyId("weather")
                 .ChildNodes.First(x => x.Attributes["class"].Value == "fcontent")
                 .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "section higher");
-
-            /*var divTemp = content.ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "temp");
-            var ddTemp = divTemp.ChildNodes.First(x => x.Name == "dd" && x.Attributes["class"].Value == "value m_temp c");
-            var t = int.Parse(ddTemp.ChildNodes.First(x => x.Name == "#text").InnerText);*/
 
             int temp = int.Parse(content
                 .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "temp")
                 .ChildNodes.First(x => x.Name == "dd" && x.Attributes["class"].Value == "value m_temp c")
                 .ChildNodes.First(x => x.Name == "#text").InnerText);
 
-            /*var humidityDiv = content.ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "wicon hum");
-            int hum = int.Parse(humidityDiv.ChildNodes.First(x => x.Name == "#text").InnerText);*/
-
             int humidity = int.Parse(content
                 .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "wicon hum")
                 .ChildNodes.First(x => x.Name == "#text").InnerText);
-
-            /*var cloudsDiv = content.ChildNodes.First(x => x.Name == "dl" && x.Attributes["class"].Value == "cloudness");
-            var dtClouds = cloudsDiv.ChildNodes.First(x => x.Name == "dt").Attributes["title"].Value;*/
 
             var cloudsAndPrecipitation = content
                 .ChildNodes.First(x => x.Name == "dl" && x.Attributes["class"].Value == "cloudness")

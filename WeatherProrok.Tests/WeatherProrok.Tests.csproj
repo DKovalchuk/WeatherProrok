@@ -35,7 +35,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="WeatherProrok.DAL.Fakes">
+      <HintPath>FakesAssemblies\WeatherProrok.DAL.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="WeatherProrok.Logic.Fakes">
+      <HintPath>FakesAssemblies\WeatherProrok.Logic.Fakes.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -53,16 +62,23 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Logic\GismeteoProviderTests.cs" />
+    <Compile Include="Logic\WeatherProcessorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <Fakes Include="Fakes\WeatherProrok.DAL.fakes" />
+    <Fakes Include="Fakes\WeatherProrok.Logic.fakes" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherProrok.DAL\WeatherProrok.DAL.csproj">
+      <Project>{5e5e15c2-897d-4545-a91d-a5fbfa94f5e3}</Project>
+      <Name>WeatherProrok.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeatherProrok.Logic\WeatherProrok.Logic.csproj">
       <Project>{7fc20014-abcf-4a48-917c-229e82f59104}</Project>
       <Name>WeatherProrok.Logic</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

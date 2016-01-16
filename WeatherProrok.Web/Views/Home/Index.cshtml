@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<WeatherProrok.Web.ViewModel.WeatherEntityViewModel>
+
+<div class="container">
+    <div style="padding-top: 20px;"></div>
+    <table id="weather" class="display">
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Current Temp</th>
+                <th>Current Humidity</th>
+                <th>Clouds</th>
+                <th>Precipitations</th>
+                <th>Update time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <th><a href="/Weather/City?id=@item.Id">@item.Name</a></th>
+                    <th>@item.Temp</th>
+                    <th>@item.Humidity</th>
+                    <th>@item.Cloudity</th>
+                    <th>@item.Precipitation</th>
+                    <th>@item.CurrentDateTime</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#weather').DataTable();
+        });
+    </script>
+}

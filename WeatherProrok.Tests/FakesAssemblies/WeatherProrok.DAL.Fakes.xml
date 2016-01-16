@@ -1,0 +1,1313 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeatherProrok.DAL.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:WeatherProrok.DAL.Fakes.ShimWeatherContext">
+            <summary>Shim type of WeatherProrok.DAL.WeatherContext</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.ShimWeatherContext.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.ShimWeatherContext.#ctor(WeatherProrok.DAL.WeatherContext)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.CitiesGet">
+            <summary>Sets the shim of WeatherContext.get_Cities()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.CitiesSetDbSetOfCity">
+            <summary>Sets the shim of WeatherContext.set_Cities(DbSet`1&lt;City&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.CloudityDictGet">
+            <summary>Sets the shim of WeatherContext.get_CloudityDict()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.CloudityDictSetDbSetOfCloudity">
+            <summary>Sets the shim of WeatherContext.set_CloudityDict(DbSet`1&lt;Cloudity&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.FactWeathersGet">
+            <summary>Sets the shim of WeatherContext.get_FactWeathers()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.FactWeathersSetDbSetOfFactWeather">
+            <summary>Sets the shim of WeatherContext.set_FactWeathers(DbSet`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.ForecastWeathersGet">
+            <summary>Sets the shim of WeatherContext.get_ForecastWeathers()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.ForecastWeathersSetDbSetOfForecastWeather">
+            <summary>Sets the shim of WeatherContext.set_ForecastWeathers(DbSet`1&lt;ForecastWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.PrecipitationDictGet">
+            <summary>Sets the shim of WeatherContext.get_PrecipitationDict()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.AllInstances.PrecipitationDictSetDbSetOfPrecipitation">
+            <summary>Sets the shim of WeatherContext.set_PrecipitationDict(DbSet`1&lt;Precipitation&gt; value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.ShimWeatherContext.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.ShimWeatherContext.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.ShimWeatherContext.Bind(System.Data.Entity.Infrastructure.IObjectContextAdapter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.ShimWeatherContext.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.CitiesGet">
+            <summary>Sets the shim of WeatherContext.get_Cities()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.CitiesSetDbSetOfCity">
+            <summary>Sets the shim of WeatherContext.set_Cities(DbSet`1&lt;City&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.CloudityDictGet">
+            <summary>Sets the shim of WeatherContext.get_CloudityDict()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.CloudityDictSetDbSetOfCloudity">
+            <summary>Sets the shim of WeatherContext.set_CloudityDict(DbSet`1&lt;Cloudity&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.Constructor">
+            <summary>Sets the shim of WeatherContext.WeatherContext()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.FactWeathersGet">
+            <summary>Sets the shim of WeatherContext.get_FactWeathers()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.FactWeathersSetDbSetOfFactWeather">
+            <summary>Sets the shim of WeatherContext.set_FactWeathers(DbSet`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.ForecastWeathersGet">
+            <summary>Sets the shim of WeatherContext.get_ForecastWeathers()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.ForecastWeathersSetDbSetOfForecastWeather">
+            <summary>Sets the shim of WeatherContext.set_ForecastWeathers(DbSet`1&lt;ForecastWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.PrecipitationDictGet">
+            <summary>Sets the shim of WeatherContext.get_PrecipitationDict()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.ShimWeatherContext.PrecipitationDictSetDbSetOfPrecipitation">
+            <summary>Sets the shim of WeatherContext.set_PrecipitationDict(DbSet`1&lt;Precipitation&gt; value)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Fakes.StubWeatherContext">
+            <summary>Stub type of WeatherProrok.DAL.WeatherContext</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.StubWeatherContext.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.Dispose(System.Boolean)">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.DisposeBoolean">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.Equals(System.Object)">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.EqualsObject">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.GetHashCode">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.GetHashCode01">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.InitializeStub">
+            <summary>Initializes a new instance of type StubWeatherContext</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.StubWeatherContext.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Fakes.StubWeatherContext.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>Sets the stub of DbContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.OnModelCreatingDbModelBuilder">
+            <summary>Sets the stub of DbContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.SaveChanges">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.SaveChanges01">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.SaveChangesAsync">
+            <summary>Sets the stub of DbContext.SaveChangesAsync()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>Sets the stub of DbContext.SaveChangesAsync(CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.SaveChangesAsync01">
+            <summary>Sets the stub of DbContext.SaveChangesAsync()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.SaveChangesAsyncCancellationToken">
+            <summary>Sets the stub of DbContext.SaveChangesAsync(CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.Set(System.Type)">
+            <summary>Sets the stub of DbContext.Set(Type entityType)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.Set``1">
+            <summary>Sets the stub of DbContext.Set()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.SetOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Data.Entity.DbSet{``0}})">
+            <summary>Sets stubs of Set()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.SetType">
+            <summary>Sets the stub of DbContext.Set(Type entityType)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.ShouldValidateEntityDbEntityEntry">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.ToString">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.ToString01">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Fakes.StubWeatherContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})">
+            <summary>Sets the stub of DbContext.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Fakes.StubWeatherContext.ValidateEntityDbEntityEntryIDictionaryOfObjectObject">
+            <summary>Sets the stub of DbContext.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys">
+            <summary>Shim type of WeatherProrok.DAL.Migrations.AddKeys</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.#ctor(WeatherProrok.DAL.Migrations.AddKeys)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.AllInstances.Down">
+            <summary>Sets the shim of AddKeys.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of AddKeys.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of AddKeys.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of AddKeys.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.AllInstances.Up">
+            <summary>Sets the shim of AddKeys.Up()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.Constructor">
+            <summary>Sets the shim of AddKeys.AddKeys()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.Down">
+            <summary>Sets the shim of AddKeys.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of AddKeys.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of AddKeys.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of AddKeys.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys.Up">
+            <summary>Sets the shim of AddKeys.Up()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys._Upb__1ColumnBuilder">
+            <summary>Sets the shim of AddKeys.&lt;Up&gt;b__1(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimAddKeys._Upb__2ColumnBuilder">
+            <summary>Sets the shim of AddKeys.&lt;Up&gt;b__2(ColumnBuilder c)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather">
+            <summary>Shim type of WeatherProrok.DAL.Migrations.ChangeFactWeather</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.#ctor(WeatherProrok.DAL.Migrations.ChangeFactWeather)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.AllInstances.Down">
+            <summary>Sets the shim of ChangeFactWeather.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.AllInstances.Up">
+            <summary>Sets the shim of ChangeFactWeather.Up()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.Constructor">
+            <summary>Sets the shim of ChangeFactWeather.ChangeFactWeather()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.Down">
+            <summary>Sets the shim of ChangeFactWeather.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather.Up">
+            <summary>Sets the shim of ChangeFactWeather.Up()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather._Downb__8ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather.&lt;Down&gt;b__8(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather._Downb__9ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather.&lt;Down&gt;b__9(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather._Upb__0ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather.&lt;Up&gt;b__0(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather._Upb__1ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather.&lt;Up&gt;b__1(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather._Upb__2ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather.&lt;Up&gt;b__2(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather._Upb__3ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather.&lt;Up&gt;b__3(ColumnBuilder c)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1">
+            <summary>Shim type of WeatherProrok.DAL.Migrations.ChangeFactWeather1</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.#ctor(WeatherProrok.DAL.Migrations.ChangeFactWeather1)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.AllInstances.Down">
+            <summary>Sets the shim of ChangeFactWeather1.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.AllInstances.Up">
+            <summary>Sets the shim of ChangeFactWeather1.Up()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.Constructor">
+            <summary>Sets the shim of ChangeFactWeather1.ChangeFactWeather1()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.Down">
+            <summary>Sets the shim of ChangeFactWeather1.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeather1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1.Up">
+            <summary>Sets the shim of ChangeFactWeather1.Up()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1._Downb__4ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather1.&lt;Down&gt;b__4(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1._Downb__5ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather1.&lt;Down&gt;b__5(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1._Upb__0ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather1.&lt;Up&gt;b__0(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1._Upb__1ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeather1.&lt;Up&gt;b__1(ColumnBuilder c)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB">
+            <summary>Shim type of WeatherProrok.DAL.Migrations.InitDB</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.#ctor(WeatherProrok.DAL.Migrations.InitDB)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.AllInstances.Down">
+            <summary>Sets the shim of InitDB.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of InitDB.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of InitDB.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of InitDB.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.AllInstances.Up">
+            <summary>Sets the shim of InitDB.Up()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.Constructor">
+            <summary>Sets the shim of InitDB.InitDB()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.Down">
+            <summary>Sets the shim of InitDB.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of InitDB.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of InitDB.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of InitDB.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB.Up">
+            <summary>Sets the shim of InitDB.Up()</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimCity">
+            <summary>Shim type of WeatherProrok.DAL.Model.City</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCity.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCity.#ctor(WeatherProrok.DAL.Model.City)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.CityProviderIdGet">
+            <summary>Sets the shim of City.get_CityProviderId()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.CityProviderIdSetString">
+            <summary>Sets the shim of City.set_CityProviderId(String value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.FactWeathersGet">
+            <summary>Sets the shim of City.get_FactWeathers()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.FactWeathersSetICollectionOfFactWeather">
+            <summary>Sets the shim of City.set_FactWeathers(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.ForecastWeathersGet">
+            <summary>Sets the shim of City.get_ForecastWeathers()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.ForecastWeathersSetICollectionOfForecastWeather">
+            <summary>Sets the shim of City.set_ForecastWeathers(ICollection`1&lt;ForecastWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.IdGet">
+            <summary>Sets the shim of City.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.IdSetGuid">
+            <summary>Sets the shim of City.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.NameGet">
+            <summary>Sets the shim of City.get_Name()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.AllInstances.NameSetString">
+            <summary>Sets the shim of City.set_Name(String value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCity.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCity.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCity.Bind(WeatherProrok.DAL.Model.IEntity)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.CityProviderIdGet">
+            <summary>Sets the shim of City.get_CityProviderId()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.CityProviderIdSetString">
+            <summary>Sets the shim of City.set_CityProviderId(String value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.Constructor">
+            <summary>Sets the shim of City.City()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.FactWeathersGet">
+            <summary>Sets the shim of City.get_FactWeathers()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.FactWeathersSetICollectionOfFactWeather">
+            <summary>Sets the shim of City.set_FactWeathers(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.ForecastWeathersGet">
+            <summary>Sets the shim of City.get_ForecastWeathers()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.ForecastWeathersSetICollectionOfForecastWeather">
+            <summary>Sets the shim of City.set_ForecastWeathers(ICollection`1&lt;ForecastWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.IdGet">
+            <summary>Sets the shim of City.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.IdSetGuid">
+            <summary>Sets the shim of City.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.NameGet">
+            <summary>Sets the shim of City.get_Name()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCity.NameSetString">
+            <summary>Sets the shim of City.set_Name(String value)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimCloudity">
+            <summary>Shim type of WeatherProrok.DAL.Model.Cloudity</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCloudity.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCloudity.#ctor(WeatherProrok.DAL.Model.Cloudity)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimCloudity.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.AllInstances.FactWeatherGet">
+            <summary>Sets the shim of Cloudity.get_FactWeather()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.AllInstances.FactWeatherSetICollectionOfFactWeather">
+            <summary>Sets the shim of Cloudity.set_FactWeather(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.AllInstances.IdGet">
+            <summary>Sets the shim of Cloudity.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.AllInstances.IdSetGuid">
+            <summary>Sets the shim of Cloudity.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.AllInstances.NameGet">
+            <summary>Sets the shim of Cloudity.get_Name()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.AllInstances.NameSetString">
+            <summary>Sets the shim of Cloudity.set_Name(String value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCloudity.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCloudity.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimCloudity.Bind(WeatherProrok.DAL.Model.IEntity)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.Constructor">
+            <summary>Sets the shim of Cloudity.Cloudity()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.FactWeatherGet">
+            <summary>Sets the shim of Cloudity.get_FactWeather()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.FactWeatherSetICollectionOfFactWeather">
+            <summary>Sets the shim of Cloudity.set_FactWeather(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.IdGet">
+            <summary>Sets the shim of Cloudity.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.IdSetGuid">
+            <summary>Sets the shim of Cloudity.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.NameGet">
+            <summary>Sets the shim of Cloudity.get_Name()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimCloudity.NameSetString">
+            <summary>Sets the shim of Cloudity.set_Name(String value)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimFactWeather">
+            <summary>Shim type of WeatherProrok.DAL.Model.FactWeather</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.#ctor(WeatherProrok.DAL.Model.FactWeather)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.CityGet">
+            <summary>Sets the shim of FactWeather.get_City()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.CityIdGet">
+            <summary>Sets the shim of FactWeather.get_CityId()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.CityIdSetGuid">
+            <summary>Sets the shim of FactWeather.set_CityId(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.CitySetCity">
+            <summary>Sets the shim of FactWeather.set_City(City value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.CloudityGet">
+            <summary>Sets the shim of FactWeather.get_Cloudity()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.ClouditySetInt32">
+            <summary>Sets the shim of FactWeather.set_Cloudity(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.HumidityGet">
+            <summary>Sets the shim of FactWeather.get_Humidity()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.HumiditySetInt32">
+            <summary>Sets the shim of FactWeather.set_Humidity(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.IdGet">
+            <summary>Sets the shim of FactWeather.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.IdSetGuid">
+            <summary>Sets the shim of FactWeather.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.PrecipitationsGet">
+            <summary>Sets the shim of FactWeather.get_Precipitations()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.PrecipitationsSetInt32">
+            <summary>Sets the shim of FactWeather.set_Precipitations(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.TempGet">
+            <summary>Sets the shim of FactWeather.get_Temp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.TempSetInt32">
+            <summary>Sets the shim of FactWeather.set_Temp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.UpdatedGet">
+            <summary>Sets the shim of FactWeather.get_Updated()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.UpdatedSetDateTime">
+            <summary>Sets the shim of FactWeather.set_Updated(DateTime value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.Bind(WeatherProrok.DAL.Model.IEntity)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.CityGet">
+            <summary>Sets the shim of FactWeather.get_City()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.CityIdGet">
+            <summary>Sets the shim of FactWeather.get_CityId()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.CityIdSetGuid">
+            <summary>Sets the shim of FactWeather.set_CityId(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.CitySetCity">
+            <summary>Sets the shim of FactWeather.set_City(City value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.CloudityGet">
+            <summary>Sets the shim of FactWeather.get_Cloudity()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.ClouditySetInt32">
+            <summary>Sets the shim of FactWeather.set_Cloudity(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.Constructor">
+            <summary>Sets the shim of FactWeather.FactWeather()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.HumidityGet">
+            <summary>Sets the shim of FactWeather.get_Humidity()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.HumiditySetInt32">
+            <summary>Sets the shim of FactWeather.set_Humidity(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.IdGet">
+            <summary>Sets the shim of FactWeather.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.IdSetGuid">
+            <summary>Sets the shim of FactWeather.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.PrecipitationsGet">
+            <summary>Sets the shim of FactWeather.get_Precipitations()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.PrecipitationsSetInt32">
+            <summary>Sets the shim of FactWeather.set_Precipitations(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.TempGet">
+            <summary>Sets the shim of FactWeather.get_Temp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.TempSetInt32">
+            <summary>Sets the shim of FactWeather.set_Temp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.UpdatedGet">
+            <summary>Sets the shim of FactWeather.get_Updated()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.UpdatedSetDateTime">
+            <summary>Sets the shim of FactWeather.set_Updated(DateTime value)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather">
+            <summary>Shim type of WeatherProrok.DAL.Model.ForecastWeather</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.#ctor(WeatherProrok.DAL.Model.ForecastWeather)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.CityGet">
+            <summary>Sets the shim of ForecastWeather.get_City()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.CityIdGet">
+            <summary>Sets the shim of ForecastWeather.get_CityId()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.CityIdSetGuid">
+            <summary>Sets the shim of ForecastWeather.set_CityId(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.CitySetCity">
+            <summary>Sets the shim of ForecastWeather.set_City(City value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.ForecastToGet">
+            <summary>Sets the shim of ForecastWeather.get_ForecastTo()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.ForecastToSetDateTime">
+            <summary>Sets the shim of ForecastWeather.set_ForecastTo(DateTime value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.HumidityGet">
+            <summary>Sets the shim of ForecastWeather.get_Humidity()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.HumiditySetInt32">
+            <summary>Sets the shim of ForecastWeather.set_Humidity(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.IdGet">
+            <summary>Sets the shim of ForecastWeather.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.IdSetGuid">
+            <summary>Sets the shim of ForecastWeather.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.TempGet">
+            <summary>Sets the shim of ForecastWeather.get_Temp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.TempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_Temp(Int32 value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.Bind(WeatherProrok.DAL.Model.IEntity)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.CityGet">
+            <summary>Sets the shim of ForecastWeather.get_City()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.CityIdGet">
+            <summary>Sets the shim of ForecastWeather.get_CityId()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.CityIdSetGuid">
+            <summary>Sets the shim of ForecastWeather.set_CityId(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.CitySetCity">
+            <summary>Sets the shim of ForecastWeather.set_City(City value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.Constructor">
+            <summary>Sets the shim of ForecastWeather.ForecastWeather()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.ForecastToGet">
+            <summary>Sets the shim of ForecastWeather.get_ForecastTo()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.ForecastToSetDateTime">
+            <summary>Sets the shim of ForecastWeather.set_ForecastTo(DateTime value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.HumidityGet">
+            <summary>Sets the shim of ForecastWeather.get_Humidity()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.HumiditySetInt32">
+            <summary>Sets the shim of ForecastWeather.set_Humidity(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.IdGet">
+            <summary>Sets the shim of ForecastWeather.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.IdSetGuid">
+            <summary>Sets the shim of ForecastWeather.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.TempGet">
+            <summary>Sets the shim of ForecastWeather.get_Temp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.TempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_Temp(Int32 value)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation">
+            <summary>Shim type of WeatherProrok.DAL.Model.Precipitation</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.#ctor(WeatherProrok.DAL.Model.Precipitation)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.AllInstances.FactWeatherGet">
+            <summary>Sets the shim of Precipitation.get_FactWeather()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.AllInstances.FactWeatherSetICollectionOfFactWeather">
+            <summary>Sets the shim of Precipitation.set_FactWeather(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.AllInstances.IdGet">
+            <summary>Sets the shim of Precipitation.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.AllInstances.IdSetGuid">
+            <summary>Sets the shim of Precipitation.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.AllInstances.NameGet">
+            <summary>Sets the shim of Precipitation.get_Name()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.AllInstances.NameSetString">
+            <summary>Sets the shim of Precipitation.set_Name(String value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.Bind(WeatherProrok.DAL.Model.IEntity)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.Constructor">
+            <summary>Sets the shim of Precipitation.Precipitation()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.FactWeatherGet">
+            <summary>Sets the shim of Precipitation.get_FactWeather()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.FactWeatherSetICollectionOfFactWeather">
+            <summary>Sets the shim of Precipitation.set_FactWeather(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.IdGet">
+            <summary>Sets the shim of Precipitation.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.IdSetGuid">
+            <summary>Sets the shim of Precipitation.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.NameGet">
+            <summary>Sets the shim of Precipitation.get_Name()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation.NameSetString">
+            <summary>Sets the shim of Precipitation.set_Name(String value)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.StubCity">
+            <summary>Stub type of WeatherProrok.DAL.Model.City</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubCity.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubCity.AttachBackingFieldToFactWeathers">
+            <summary>Attaches delegates to emulate StubCity.FactWeathers as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubCity.AttachBackingFieldToForecastWeathers">
+            <summary>Attaches delegates to emulate StubCity.ForecastWeathers as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCity.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCity.FactWeathers">
+            <summary>Sets the stub of City.get_FactWeathers()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubCity.FactWeathersGet">
+            <summary>Sets the stub of City.get_FactWeathers()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubCity.FactWeathersSetICollectionOfFactWeather">
+            <summary>Sets the stub of City.set_FactWeathers(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCity.ForecastWeathers">
+            <summary>Sets the stub of City.get_ForecastWeathers()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubCity.ForecastWeathersGet">
+            <summary>Sets the stub of City.get_ForecastWeathers()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubCity.ForecastWeathersSetICollectionOfForecastWeather">
+            <summary>Sets the stub of City.set_ForecastWeathers(ICollection`1&lt;ForecastWeather&gt; value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubCity.InitializeStub">
+            <summary>Initializes a new instance of type StubCity</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCity.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCity.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.StubCloudity">
+            <summary>Stub type of WeatherProrok.DAL.Model.Cloudity</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubCloudity.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubCloudity.AttachBackingFieldToFactWeather">
+            <summary>Attaches delegates to emulate StubCloudity.FactWeather as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCloudity.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCloudity.FactWeather">
+            <summary>Sets the stub of Cloudity.get_FactWeather()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubCloudity.FactWeatherGet">
+            <summary>Sets the stub of Cloudity.get_FactWeather()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubCloudity.FactWeatherSetICollectionOfFactWeather">
+            <summary>Sets the stub of Cloudity.set_FactWeather(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubCloudity.InitializeStub">
+            <summary>Initializes a new instance of type StubCloudity</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCloudity.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubCloudity.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.StubFactWeather">
+            <summary>Stub type of WeatherProrok.DAL.Model.FactWeather</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubFactWeather.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubFactWeather.AttachBackingFieldToCity">
+            <summary>Attaches delegates to emulate StubFactWeather.City as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubFactWeather.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubFactWeather.City">
+            <summary>Sets the stub of FactWeather.get_City()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubFactWeather.CityGet">
+            <summary>Sets the stub of FactWeather.get_City()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubFactWeather.CitySetCity">
+            <summary>Sets the stub of FactWeather.set_City(City value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubFactWeather.InitializeStub">
+            <summary>Initializes a new instance of type StubFactWeather</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubFactWeather.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubFactWeather.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.StubForecastWeather">
+            <summary>Stub type of WeatherProrok.DAL.Model.ForecastWeather</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.AttachBackingFieldToCity">
+            <summary>Attaches delegates to emulate StubForecastWeather.City as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.City">
+            <summary>Sets the stub of ForecastWeather.get_City()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.CityGet">
+            <summary>Sets the stub of ForecastWeather.get_City()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.CitySetCity">
+            <summary>Sets the stub of ForecastWeather.set_City(City value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.InitializeStub">
+            <summary>Initializes a new instance of type StubForecastWeather</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubForecastWeather.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.StubIEntity">
+            <summary>Stub type of WeatherProrok.DAL.Model.IEntity</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubIEntity.#ctor">
+            <summary>Initializes a new instance of type StubIEntity</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubIEntity.AttachBackingFieldToId">
+            <summary>Attaches delegates to emulate StubIEntity.Id as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubIEntity.WeatherProrok#DAL#Model#IEntity#Id">
+            <summary>Sets the stub of IEntity.get_Id()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubIEntity.IdGet">
+            <summary>Sets the stub of IEntity.get_Id()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubIEntity.IdSetGuid">
+            <summary>Sets the stub of IEntity.set_Id(Guid value)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Model.Fakes.StubPrecipitation">
+            <summary>Stub type of WeatherProrok.DAL.Model.Precipitation</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.AttachBackingFieldToFactWeather">
+            <summary>Attaches delegates to emulate StubPrecipitation.FactWeather as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.FactWeather">
+            <summary>Sets the stub of Precipitation.get_FactWeather()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.FactWeatherGet">
+            <summary>Sets the stub of Precipitation.get_FactWeather()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.FactWeatherSetICollectionOfFactWeather">
+            <summary>Sets the stub of Precipitation.set_FactWeather(ICollection`1&lt;FactWeather&gt; value)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.InitializeStub">
+            <summary>Initializes a new instance of type StubPrecipitation</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.StubPrecipitation.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1">
+            <summary>Shim type of WeatherProrok.DAL.Repository.BaseRepository`1</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.#ctor(WeatherProrok.DAL.Repository.BaseRepository{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AddT0">
+            <summary>Sets the shim of BaseRepository`1.Add(!0 entity)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.AddT0">
+            <summary>Sets the shim of BaseRepository`1.Add(!0 entity)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.ContextGet">
+            <summary>Sets the shim of BaseRepository`1.get_Context()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.DeleteGuid">
+            <summary>Sets the shim of BaseRepository`1.Delete(Guid id)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.DeleteT0">
+            <summary>Sets the shim of BaseRepository`1.Delete(!0 entity)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.Dispose">
+            <summary>Sets the shim of BaseRepository`1.Dispose()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.GetAllBoolean">
+            <summary>Sets the shim of BaseRepository`1.GetAll(Boolean asNoTracking)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.GetByExpressionOfFuncOfT0BooleanBoolean">
+            <summary>Sets the shim of BaseRepository`1.GetBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.GetByIdGuidBoolean">
+            <summary>Sets the shim of BaseRepository`1.GetById(Guid id, Boolean asNoTracking)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.GetSingleByExpressionOfFuncOfT0BooleanBoolean">
+            <summary>Sets the shim of BaseRepository`1.GetSingleBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.AllInstances.UpdateT0">
+            <summary>Sets the shim of BaseRepository`1.Update(!0 entity)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.Bind(WeatherProrok.DAL.Repository.IBaseRepository{`0})">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.Constructor">
+            <summary>Sets the shim of BaseRepository`1.BaseRepository`1()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.ConstructorWeatherContext">
+            <summary>Sets the shim of BaseRepository`1.BaseRepository`1(WeatherContext context)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.ContextGet">
+            <summary>Sets the shim of BaseRepository`1.get_Context()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.DeleteGuid">
+            <summary>Sets the shim of BaseRepository`1.Delete(Guid id)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.DeleteT0">
+            <summary>Sets the shim of BaseRepository`1.Delete(!0 entity)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.Dispose">
+            <summary>Sets the shim of BaseRepository`1.Dispose()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.GetAllBoolean">
+            <summary>Sets the shim of BaseRepository`1.GetAll(Boolean asNoTracking)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.GetByExpressionOfFuncOfT0BooleanBoolean">
+            <summary>Sets the shim of BaseRepository`1.GetBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.GetByIdGuidBoolean">
+            <summary>Sets the shim of BaseRepository`1.GetById(Guid id, Boolean asNoTracking)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.GetSingleByExpressionOfFuncOfT0BooleanBoolean">
+            <summary>Sets the shim of BaseRepository`1.GetSingleBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.ShimBaseRepository`1.UpdateT0">
+            <summary>Sets the shim of BaseRepository`1.Update(!0 entity)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1">
+            <summary>Stub type of WeatherProrok.DAL.Repository.BaseRepository`1</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.#ctor(WeatherProrok.DAL.WeatherContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.Add(`0)">
+            <summary>Sets the stub of BaseRepository`1.Add(!0 entity)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.AddT0">
+            <summary>Sets the stub of BaseRepository`1.Add(!0 entity)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.Delete(`0)">
+            <summary>Sets the stub of BaseRepository`1.Delete(!0 entity)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.Delete(System.Guid)">
+            <summary>Sets the stub of BaseRepository`1.Delete(Guid id)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.DeleteGuid">
+            <summary>Sets the stub of BaseRepository`1.Delete(Guid id)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.DeleteT0">
+            <summary>Sets the stub of BaseRepository`1.Delete(!0 entity)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.GetAll(System.Boolean)">
+            <summary>Sets the stub of BaseRepository`1.GetAll(Boolean asNoTracking)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.GetAllBoolean">
+            <summary>Sets the stub of BaseRepository`1.GetAll(Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.GetBy(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <summary>Sets the stub of BaseRepository`1.GetBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.GetByExpressionOfFuncOfT0BooleanBoolean">
+            <summary>Sets the stub of BaseRepository`1.GetBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.GetById(System.Guid,System.Boolean)">
+            <summary>Sets the stub of BaseRepository`1.GetById(Guid id, Boolean asNoTracking)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.GetByIdGuidBoolean">
+            <summary>Sets the stub of BaseRepository`1.GetById(Guid id, Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.GetSingleBy(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <summary>Sets the stub of BaseRepository`1.GetSingleBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.GetSingleByExpressionOfFuncOfT0BooleanBoolean">
+            <summary>Sets the stub of BaseRepository`1.GetSingleBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.InitializeStub">
+            <summary>Initializes a new instance of type StubBaseRepository</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.Update(`0)">
+            <summary>Sets the stub of BaseRepository`1.Update(!0 entity)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubBaseRepository`1.UpdateT0">
+            <summary>Sets the stub of BaseRepository`1.Update(!0 entity)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1">
+            <summary>Stub type of WeatherProrok.DAL.Repository.IBaseRepository`1</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.#ctor">
+            <summary>Initializes a new instance of type StubIBaseRepository</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.AddT0">
+            <summary>Sets the stub of IBaseRepository`1.Add(!0 entity)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#Context">
+            <summary>Sets the stub of IBaseRepository`1.get_Context()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.ContextGet">
+            <summary>Sets the stub of IBaseRepository`1.get_Context()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.DeleteGuid">
+            <summary>Sets the stub of IBaseRepository`1.Delete(Guid id)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.DeleteT0">
+            <summary>Sets the stub of IBaseRepository`1.Delete(!0 entity)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.Dispose">
+            <summary>Sets the stub of IBaseRepository`1.Dispose()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.Dispose01">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.GetAllBoolean">
+            <summary>Sets the stub of IBaseRepository`1.GetAll(Boolean asNoTracking)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.GetByExpressionOfFuncOfT0BooleanBoolean">
+            <summary>Sets the stub of IBaseRepository`1.GetBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.GetByIdGuidBoolean">
+            <summary>Sets the stub of IBaseRepository`1.GetById(Guid id, Boolean asNoTracking)</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.GetSingleByExpressionOfFuncOfT0BooleanBoolean">
+            <summary>Sets the stub of IBaseRepository`1.GetSingleBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.System#IDisposable#Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.UpdateT0">
+            <summary>Sets the stub of IBaseRepository`1.Update(!0 entity)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#Add(`0)">
+            <summary>Sets the stub of IBaseRepository`1.Add(!0 entity)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#Delete(System.Guid)">
+            <summary>Sets the stub of IBaseRepository`1.Delete(Guid id)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#Delete(`0)">
+            <summary>Sets the stub of IBaseRepository`1.Delete(!0 entity)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#Dispose">
+            <summary>Sets the stub of IBaseRepository`1.Dispose()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#GetAll(System.Boolean)">
+            <summary>Sets the stub of IBaseRepository`1.GetAll(Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#GetBy(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <summary>Sets the stub of IBaseRepository`1.GetBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#GetById(System.Guid,System.Boolean)">
+            <summary>Sets the stub of IBaseRepository`1.GetById(Guid id, Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#GetSingleBy(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <summary>Sets the stub of IBaseRepository`1.GetSingleBy(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; expression, Boolean asNoTracking)</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Repository.Fakes.StubIBaseRepository`1.WeatherProrok#DAL#Repository#IBaseRepository{T}#Update(`0)">
+            <summary>Sets the stub of IBaseRepository`1.Update(!0 entity)</summary>
+        </member>
+    </members>
+</doc>

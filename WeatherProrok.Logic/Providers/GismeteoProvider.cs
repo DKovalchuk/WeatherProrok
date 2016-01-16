@@ -62,7 +62,7 @@ namespace WeatherProrok.Logic.Providers
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<CityModel>> SearchCityAsync(string search)
+        public async Task<IEnumerable<SearchCityModel>> SearchCityAsync(string search)
         {
             var url = string.Format("{0}/ajax/suggest/?lang=ru&startsWith={1}&sort=typ", GismeteoRootURL, search);
 
@@ -70,12 +70,12 @@ namespace WeatherProrok.Logic.Providers
             var data = JsonConvert.DeserializeObject<GismeteoResponceModel>(responceData);
 
             if (data.Items.Any())
-                return data.Items.Select(i => new CityModel { Id = i.Id.ToString(), Name = i.Name, FullName = string.Format("{0}, {1}, {2}, {3}", i.CountryName, i.DistrictName, i.SubDistrictName == i.Name ? string.Empty : i.SubDistrictName, i.Name) });
+                return data.Items.Select(i => new SearchCityModel { Id = i.Id.ToString(), Name = i.Name, FullName = string.Format("{0}, {1}, {2}, {3}", i.CountryName, i.DistrictName, i.SubDistrictName == i.Name ? string.Empty : i.SubDistrictName, i.Name) });
 
-            return new List<CityModel>();
+            return new List<SearchCityModel>();
         }
 
-        public IEnumerable<CityModel> SearchCity(string search)
+        public IEnumerable<SearchCityModel> SearchCity(string search)
         {
             var url = string.Format("{0}/ajax/suggest/?lang=ru&startsWith={1}&sort=typ", GismeteoRootURL, search);
 
@@ -83,9 +83,9 @@ namespace WeatherProrok.Logic.Providers
             var data = JsonConvert.DeserializeObject<GismeteoResponceModel>(responceData);
 
             if (data.Items.Any())
-                return data.Items.Select(i => new CityModel { Id = i.Id.ToString(), Name = i.Name, FullName = string.Format("{0}, {1}, {2}, {3}", i.CountryName, i.DistrictName, i.SubDistrictName == i.Name ? string.Empty : i.SubDistrictName, i.Name) });
+                return data.Items.Select(i => new SearchCityModel { Id = i.Id.ToString(), Name = i.Name, FullName = string.Format("{0}, {1}, {2}, {3}", i.CountryName, i.DistrictName, i.SubDistrictName == i.Name ? string.Empty : i.SubDistrictName, i.Name) });
 
-            return new List<CityModel>();
+            return new List<SearchCityModel>();
         }
 
         private string MakeRequest(string url)

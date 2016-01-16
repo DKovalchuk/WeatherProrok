@@ -15,8 +15,10 @@ namespace WeatherProrok.Logic.Helpers
             {
                 case "Малооблачно":
                     return Cloudity.LESS_CLOUD;
-                case "Пасмурно":
+                case "Облачно":
                     return Cloudity.CLOUD;
+                case "Пасмурно":
+                    return Cloudity.HARD_CLOUD;
                 case "Ясно":
                     return Cloudity.NONE;
                 default:

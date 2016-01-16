@@ -3,3 +3,6 @@
 /WeatherProrok.Tests/bin/
 /WeatherProrok.Tests/obj/
 /packages/
+/artifacts/bin/
+/WeatherProrok.DAL/bin/
+/WeatherProrok.DAL/obj/

@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "wrappedProject": "../../WeatherProrok.DAL/WeatherProrok.DAL.csproj",
+      "bin": {
+        "assembly": "../../WeatherProrok.DAL/obj/{configuration}/WeatherProrok.DAL.dll",
+        "pdb": "../../WeatherProrok.DAL/obj/{configuration}/WeatherProrok.DAL.pdb"
+      },
+      "dependencies": {
+        "EntityFramework": "6.1.3"
+      }
+    }
+  }
+}

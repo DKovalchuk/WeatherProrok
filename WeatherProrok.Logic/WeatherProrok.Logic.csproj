@@ -11,6 +11,7 @@
     <AssemblyName>WeatherProrok.Logic</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,11 +51,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Helpers\CityModelEx.cs" />
     <Compile Include="Helpers\GismeteoCloudsAndPrecipitationMappingHelper.cs" />
     <Compile Include="Models\CityModel.cs" />
+    <Compile Include="Models\SearchCityModel.cs" />
     <Compile Include="Models\CurrentWeatherModel.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\GismeteoResponceModel.cs" />
+    <Compile Include="Processors\ForecastProcessor.cs" />
+    <Compile Include="Processors\IForecastProcessor.cs" />
+    <Compile Include="Processors\IWeatherProcessor.cs" />
+    <Compile Include="Processors\IWeatherProcessorForScheduler.cs" />
+    <Compile Include="Processors\WeatherProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\GismeteoProvider.cs" />
     <Compile Include="Providers\IWeatherProvider.cs" />
@@ -62,6 +70,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherProrok.DAL\WeatherProrok.DAL.csproj">
+      <Project>{5e5e15c2-897d-4545-a91d-a5fbfa94f5e3}</Project>
+      <Name>WeatherProrok.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

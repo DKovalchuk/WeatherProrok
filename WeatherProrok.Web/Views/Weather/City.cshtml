@@ -1,0 +1,86 @@
+﻿@using System.Web.Script.Serialization
+@{}
+@model WeatherProrok.Web.ViewModel.CityWeatherDetailsViewModel
+
+<link rel="stylesheet" href="~/lib/morrisjs/morris.css" />
+
+<div class="container">
+    @Html.LabelFor(x => x.City.Name): @Html.DisplayFor(x => x.City.Name)
+    <table class="table">
+        <thead>
+            <tr>
+                <th><i class="wi wi-thermometer-exterior"></i> Temperature</th>
+                <th><i class="wi wi-humidity"></i> Humidity</th>
+                <th><i class="wi wi-cloud"></i> Clouds</th>
+                <th><i class="wi wi-rain"></i> Precipitations</th>
+                <th><i class="wi wi-time-1"></i> Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model.Weather)
+            {
+                <tr>
+                    <td>@item.Temp&deg;C</td>
+                    <td>@item.Humidity%</td>
+                    <td>@item.Cloudity</td>
+                    <td>@item.Precipitation</td>
+                    <td>@item.CurrentDateTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-6">
+            <label><i class="wi wi-thermometer-exterior"></i> Temperature</label>
+            <div id="tempChart" style="height: 200px;"></div>
+        </div>
+        <div class="col-md-6">
+            <label><i class="wi wi-humidity"></i> Humidity</label>
+            <div id="humChart" style="height: 200px;"></div>
+        </div>
+    </div>
+    <a asp-controller="Home" asp-action="Index"><i class="glyphicon glyphicon-backward"></i> Back</a>
+</div>
+
+@section scripts{
+    <script src="~/lib/raphael/raphael.js"></script>
+    <script src="~/lib/morrisjs/morris.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var data = $.parseJSON('@Html.Raw(new JavaScriptSerializer().Serialize(Model.Weather))');
+            new Morris.Line({
+                element: 'tempChart',
+                data: data,
+                xkey: 'CurrentDateTime',
+                ykeys: ['Temp'],
+                labels: 'Temperature',
+                xLabels: 'hour',
+                xLabelFormat: function (x) {
+                    var date = Date.parse(x);
+                    var locale = "ru-ru";
+                    return new Date(date).toLocaleString(locale, { day: 'numeric', month: 'long', year: 'numeric', hour12: false, hour: '2-digit', minute: '2-digit' })
+                },
+                yLabelFormat: function (y) {
+                    return y + '℃';
+                }
+            });
+
+            new Morris.Line({
+                element: 'humChart',
+                data: data,
+                xkey: 'CurrentDateTime',
+                ykeys: ['Humidity'],
+                labels: 'Humidity',
+                xLabels: 'hour',
+                xLabelFormat: function (x) {
+                    var date = Date.parse(x);
+                    var locale = "ru-ru";
+                    return new Date(date).toLocaleString(locale, { day: 'numeric', month: 'long', year: 'numeric', hour12: false, hour: '2-digit', minute: '2-digit' })
+                },
+                yLabelFormat: function (y) {
+                    return y + '%';
+                }
+            });
+        });
+    </script>
+}

@@ -20,7 +20,8 @@ namespace WeatherProrok.Logic.Providers
             {
                 var url = ConfigurationManager.AppSettings["GismeteoURL"];
                 if (string.IsNullOrEmpty(url))
-                    throw new Exception("Gismeteo root url not found in app.config file");
+                    url = "https://www.gismeteo.ua";
+                    //throw new Exception("Gismeteo root url not found in app.config file");
 
                 return url;
             }
@@ -70,7 +71,7 @@ namespace WeatherProrok.Logic.Providers
             var data = JsonConvert.DeserializeObject<GismeteoResponceModel>(responceData);
 
             if (data.Items.Any())
-                return data.Items.Select(i => new SearchCityModel { Id = i.Id.ToString(), Name = i.Name, FullName = string.Format("{0}, {1}, {2}, {3}", i.CountryName, i.DistrictName, i.SubDistrictName == i.Name ? string.Empty : i.SubDistrictName, i.Name) });
+                return data.Items.Select(i => new SearchCityModel { Id = i.Id.ToString(), Name = i.Name, FullName = string.IsNullOrEmpty(i.SubDistrictName) || i.SubDistrictName == i.Name ? string.Format("{0}, {1}, {2}", i.CountryName, i.DistrictName, i.Name) : string.Format("{0}, {1}, {2}, {3}", i.CountryName, i.DistrictName, i.SubDistrictName, i.Name) });
 
             return new List<SearchCityModel>();
         }
@@ -83,7 +84,7 @@ namespace WeatherProrok.Logic.Providers
             var data = JsonConvert.DeserializeObject<GismeteoResponceModel>(responceData);
 
             if (data.Items.Any())
-                return data.Items.Select(i => new SearchCityModel { Id = i.Id.ToString(), Name = i.Name, FullName = string.Format("{0}, {1}, {2}, {3}", i.CountryName, i.DistrictName, i.SubDistrictName == i.Name ? string.Empty : i.SubDistrictName, i.Name) });
+                return data.Items.Select(i => new SearchCityModel { Id = i.Id.ToString(), Name = i.Name, FullName = string.IsNullOrEmpty(i.SubDistrictName) || i.SubDistrictName == i.Name ? string.Format("{0}, {1}, {2}", i.CountryName, i.DistrictName, i.Name) : string.Format("{0}, {1}, {2}, {3}", i.CountryName, i.DistrictName, i.SubDistrictName, i.Name) });
 
             return new List<SearchCityModel>();
         }
@@ -116,7 +117,7 @@ namespace WeatherProrok.Logic.Providers
             int temp = int.Parse(content
                 .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "temp")
                 .ChildNodes.First(x => x.Name == "dd" && x.Attributes["class"].Value == "value m_temp c")
-                .ChildNodes.First(x => x.Name == "#text").InnerText);
+                .ChildNodes.First(x => x.Name == "#text").InnerText.Replace("&minus;", "-"));
 
             int humidity = int.Parse(content
                 .ChildNodes.First(x => x.Name == "div" && x.Attributes["class"].Value == "wicon hum")
@@ -132,7 +133,7 @@ namespace WeatherProrok.Logic.Providers
             {
                 var cp = cloudsAndPrecipitation.Split(',');
                 clouds = cp[0];
-                precipitation = cp[1];
+                precipitation = cp[1].Trim();
             }
             else
                 clouds = cloudsAndPrecipitation;

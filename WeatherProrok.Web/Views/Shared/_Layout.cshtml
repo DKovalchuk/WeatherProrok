@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="WeatherApp">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,8 @@
 
         <environment names="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-            <link rel="stylesheet" href="~/lib/DataTables/media/css/jquery.dataTables.css" />
+            <link rel="stylesheet" href="~/lib/weather-icons/css/weather-icons.css" />
+            @*<link rel="stylesheet" href="~/lib/DataTables/media/css/jquery.dataTables.css" />*@
             <link rel="stylesheet" href="~/css/site.css" />
         </environment>
         <environment names="Staging,Production">
@@ -15,6 +16,7 @@
                   asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
                   asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
             <link rel="stylesheet" href="~/lib/DataTables/media/css/jquery.dataTables.min.css" />
+            <link rel="stylesheet" href="~/lib/weather-icons/css/weather-icons.min.css" />
             <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         </environment>
         @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
@@ -51,8 +53,13 @@
         <environment names="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/lib/DataTables/media/js/jquery.dataTables.js"></script>
+            @*<script src="~/lib/DataTables/media/js/jquery.dataTables.js"></script>*@
             <script src="~/lib/angular/angular.js"></script>
+            <script src="~/lib/signalr/jquery.signalR.js"></script>
+            <script src="~/lib/angular-signalr-hub/signalr-hub.js"></script>
+            @*<script src="~/lib/angular-datatables/dist/angular-datatables.js"></script>*@
+            <script src="~/js/controller.js"></script>
+            <script src="~/lib/bootstrap3-typeahead/bootstrap3-typeahead.js"></script>
             <script src="~/js/site.js" asp-append-version="true"></script>
         </environment>
         <environment names="Staging,Production">
@@ -64,8 +71,13 @@
                     asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                     asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
             </script>
-            <script src="~/lib/DataTables/media/js/jquery.dataTables.min.js"></script>
+            @*<script src="~/lib/DataTables/media/js/jquery.dataTables.min.js"></script>*@
             <script src="~/lib/angular/angular.min.js"></script>
+            <script src="~/lib/signalr/jquery.signalR.min.js"></script>
+            <script src="~/lib/angular-signalr-hub/signalr-hub.min.js"></script>
+            @*<script src="~/lib/angular-datatables/dist/angular-datatables.min.js"></script>*@
+            <script src="~/js/controller.js"></script>
+            <script src="~/lib/bootstrap3-typeahead/bootstrap3-typeahead.min.js"></script>
             <script src="~/js/site.min.js" asp-append-version="true"></script>
         </environment>
 

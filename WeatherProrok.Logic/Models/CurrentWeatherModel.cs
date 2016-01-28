@@ -12,5 +12,6 @@ namespace WeatherProrok.Logic.Models
         public Cloudity Cloudity { get; set; }
         public Precipitation Precipitation { get; set; }
         public DateTime CurrentDateTime { get; set; }
+        public CityModel City { get; set; }
     }
 }

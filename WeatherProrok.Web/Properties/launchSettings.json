@@ -12,7 +12,6 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "DNX_IIS_RUNTIME_FRAMEWORK": "dnx46",
         "Hosting:Environment": "Development"
       }
     },

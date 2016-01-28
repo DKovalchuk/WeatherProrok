@@ -3,39 +3,135 @@
 }
 @model IEnumerable<WeatherProrok.Web.ViewModel.WeatherEntityViewModel>
 
-<div class="container">
+<div class="container" ng-controller="WeatherController">
     <div style="padding-top: 20px;"></div>
-    <table id="weather" class="display">
-        <thead>
-            <tr>
-                <th>City</th>
-                <th>Current Temp</th>
-                <th>Current Humidity</th>
-                <th>Clouds</th>
-                <th>Precipitations</th>
-                <th>Update time</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach(var item in Model)
-            {
+    <div class="row" style="margin-bottom: 5px;">
+        <div class="col-md-6">
+            <input type="text" placeholder="Type a city..." id="city" autocomplete="off" class="col-md-9" />
+            <a href="#" class="btn btn-default" id="AddCity">Add city</a>
+        </div>
+        <div class="col-md-1 pull-right">
+            <a href="javascript:void(0)" class="tableView"><i class="glyphicon glyphicon-align-justify"></i></a>
+            <a href="javascript:void(0)" class="widgetView"><i class="glyphicon glyphicon-th-large"></i></a>
+        </div>
+    </div>
+    <div class="row" id="weatherUpdateLoader" style="display: block;">
+        <div id="fountainG" class="col-md-1">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+            <div id="fountainG_6" class="fountainG"></div>
+            <div id="fountainG_7" class="fountainG"></div>
+            <div id="fountainG_8" class="fountainG"></div>
+        </div>
+        <div>
+            <span class="control-label">Updating weather...</span>
+        </div>
+    </div>
+    <div id="tableView" class="row">
+        <table id="weather" data-table="ng" class="table table-hover col-md-10">
+            <thead>
                 <tr>
-                    <th><a href="/Weather/City?id=@item.Id">@item.Name</a></th>
-                    <th>@item.Temp</th>
-                    <th>@item.Humidity</th>
-                    <th>@item.Cloudity</th>
-                    <th>@item.Precipitation</th>
-                    <th>@item.CurrentDateTime</th>
+                    <th>City</th>
+                    <th>Current Temp</th>
+                    <th>Current Humidity</th>
+                    <th>Clouds</th>
+                    <th>Precipitations</th>
+                    <th>Update time</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <tr ng-repeat="weather in weathers">
+                    <th><a href="/Weather/City/{{weather.Id}}">{{weather.Name}}</a></th>
+                    <th>{{weather.Temp}}&deg;C</th>
+                    <th>{{weather.Humidity}}%</th>
+                    <th>{{weather.Cloudity}}</th>
+                    <th>{{weather.Precipitation}}</th>
+                    <th>{{weather.CurrentDateTime}}</th>
+                </tr>
+                @*@foreach(var item in Model)
+                    {
+                        <tr>
+                            <th><a href="/Weather/City?id=@item.Id">@item.Name</a></th>
+                            <th>@item.Temp</th>
+                            <th>@item.Humidity</th>
+                            <th>@item.Cloudity</th>
+                            <th>@item.Precipitation</th>
+                            <th>@item.CurrentDateTime</th>
+                        </tr>
+                    }*@
+            </tbody>
+        </table>
+    </div>
+    <div id="widgetView" class="row" style="display: none;">
+        <div class="panel panel-primary col-md-2" ng-repeat="weather in weathers" style="padding-left:0px; padding-right: 0px; margin-right: 10px;">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a href="/Weather/City/{{weather.Id}}">{{weather.Name}}</a></h3>
+            </div>
+            <div class="panel-body">
+                @*<i class="wi {{weather.WeatherIcon}}"></i>*@
+                <span class="text-capitalize text-center"><i class="wi {{weather.WeatherIcon}}"></i> Current:</span><br />
+                <span><i class="wi wi-thermometer-exterior"></i> {{weather.Temp}}&deg;C</span><br/>
+                <span><i class="wi wi-humidity"></i> {{weather.Humidity}}%</span><br />
+                <span><i class="wi wi-cloud"></i> {{weather.Cloudity}}</span><br />
+                <span><i class="wi wi-rain"></i> {{weather.Precipitation}}</span><br />
+                <span><i class="wi wi-time-1"></i> {{weather.CurrentDateTime}}</span><br />
+                <br />
+                <span><i class="wi wi-forecast-io-clear-day"></i> Forecast</span><br />
+                <span><i class="wi wi-time-3"></i> in 3 hours: {{weather.ThreeHoursTrend}}</span><br />
+                <span><i class="wi wi-time-6"></i> in 6 hours: {{weather.SixHoursTrend}}</span><br />
+                <span><i class="wi wi-time-9"></i> in 9 hours: {{weather.NineHoursTrend}}</span><br />
+                <span><i class="wi wi-time-12"></i> in 12 hours: {{weather.ElevenHoursTrend}}</span><br />
+                <a href="/Weather/City/{{weather.Id}}">Details</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#weather').DataTable();
+            $('input#city').typeahead({
+                minLength: 3,
+                source: function (query, process) {
+                    $.post('/api/city/search', { 'value': query }, function (response) {
+
+                        return process(response);
+                    });
+
+                }
+            });
+
+            $('#AddCity').click(function () {
+                var city = $('#city').val();
+                $.post('/api/city', { 'value': city }, function (data) {
+                    console.log('city added');
+                    $('#city').val('');
+                });
+            });
+
+            $('a.tableView').click(function () {
+                $('div#widgetView').hide();
+                $('div#tableView').show();
+            });
+
+            $('a.widgetView').click(function () {
+                $('div#tableView').hide();
+                $('div#widgetView').show();
+            });
+
+
         });
+
+        function startUpdateWeater() {
+            $('div#weatherUpdateLoader').show();
+        }
+
+        function completeUpdateWeater() {
+            $('div#weatherUpdateLoader').hide();
+        }
     </script>
 }

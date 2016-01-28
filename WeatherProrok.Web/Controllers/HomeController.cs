@@ -4,11 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using WeatherProrok.Web.ViewModel;
+using Microsoft.AspNet.SignalR.Infrastructure;
 
 namespace WeatherProrok.Web.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController(IConnectionManager signalRConnectionManager)
+        {
+            SignalRConnectionManager.Create(signalRConnectionManager);
+        }
+
         public IActionResult Index()
         {
             var list = new List<WeatherEntityViewModel>

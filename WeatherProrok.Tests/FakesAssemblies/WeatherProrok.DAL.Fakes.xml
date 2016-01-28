@@ -400,6 +400,147 @@
         <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeather1._Upb__1ColumnBuilder">
             <summary>Sets the shim of ChangeFactWeather1.&lt;Up&gt;b__1(ColumnBuilder c)</summary>
         </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate">
+            <summary>Shim type of WeatherProrok.DAL.Migrations.ChangeFactWeatherUpdate</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.#ctor(WeatherProrok.DAL.Migrations.ChangeFactWeatherUpdate)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.AllInstances.Down">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.AllInstances.Up">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.Up()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.Constructor">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.ChangeFactWeatherUpdate()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.Down">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate.Up">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.Up()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate._Downb__2ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.&lt;Down&gt;b__2(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeFactWeatherUpdate._Upb__0ColumnBuilder">
+            <summary>Sets the shim of ChangeFactWeatherUpdate.&lt;Up&gt;b__0(ColumnBuilder c)</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast">
+            <summary>Shim type of WeatherProrok.DAL.Migrations.ChangeForecast</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.#ctor(WeatherProrok.DAL.Migrations.ChangeForecast)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.AllInstances.Down">
+            <summary>Sets the shim of ChangeForecast.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeForecast.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeForecast.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeForecast.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.AllInstances.Up">
+            <summary>Sets the shim of ChangeForecast.Up()</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.Constructor">
+            <summary>Sets the shim of ChangeForecast.ChangeForecast()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.Down">
+            <summary>Sets the shim of ChangeForecast.Down()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeForecast.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeForecast.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of ChangeForecast.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast.Up">
+            <summary>Sets the shim of ChangeForecast.Up()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast._Downb__8ColumnBuilder">
+            <summary>Sets the shim of ChangeForecast.&lt;Down&gt;b__8(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast._Upb__0ColumnBuilder">
+            <summary>Sets the shim of ChangeForecast.&lt;Up&gt;b__0(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast._Upb__1ColumnBuilder">
+            <summary>Sets the shim of ChangeForecast.&lt;Up&gt;b__1(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast._Upb__2ColumnBuilder">
+            <summary>Sets the shim of ChangeForecast.&lt;Up&gt;b__2(ColumnBuilder c)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Migrations.Fakes.ShimChangeForecast._Upb__3ColumnBuilder">
+            <summary>Sets the shim of ChangeForecast.&lt;Up&gt;b__3(ColumnBuilder c)</summary>
+        </member>
         <member name="T:WeatherProrok.DAL.Migrations.Fakes.ShimInitDB">
             <summary>Shim type of WeatherProrok.DAL.Migrations.InitDB</summary>
         </member>
@@ -667,8 +808,8 @@
         <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.UpdatedGet">
             <summary>Sets the shim of FactWeather.get_Updated()</summary>
         </member>
-        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.UpdatedSetDateTime">
-            <summary>Sets the shim of FactWeather.set_Updated(DateTime value)</summary>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.AllInstances.UpdatedSetNullableOfDateTime">
+            <summary>Sets the shim of FactWeather.set_Updated(Nullable`1&lt;DateTime&gt; value)</summary>
         </member>
         <member name="M:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.BehaveAsCurrent">
             <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
@@ -730,8 +871,8 @@
         <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.UpdatedGet">
             <summary>Sets the shim of FactWeather.get_Updated()</summary>
         </member>
-        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.UpdatedSetDateTime">
-            <summary>Sets the shim of FactWeather.set_Updated(DateTime value)</summary>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimFactWeather.UpdatedSetNullableOfDateTime">
+            <summary>Sets the shim of FactWeather.set_Updated(Nullable`1&lt;DateTime&gt; value)</summary>
         </member>
         <member name="T:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather">
             <summary>Shim type of WeatherProrok.DAL.Model.ForecastWeather</summary>
@@ -757,6 +898,12 @@
         <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.CitySetCity">
             <summary>Sets the shim of ForecastWeather.set_City(City value)</summary>
         </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.ElevenHourTempGet">
+            <summary>Sets the shim of ForecastWeather.get_ElevenHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.ElevenHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_ElevenHourTemp(Int32 value)</summary>
+        </member>
         <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.ForecastToGet">
             <summary>Sets the shim of ForecastWeather.get_ForecastTo()</summary>
         </member>
@@ -775,11 +922,23 @@
         <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.IdSetGuid">
             <summary>Sets the shim of ForecastWeather.set_Id(Guid value)</summary>
         </member>
-        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.TempGet">
-            <summary>Sets the shim of ForecastWeather.get_Temp()</summary>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.NineHourTempGet">
+            <summary>Sets the shim of ForecastWeather.get_NineHourTemp()</summary>
         </member>
-        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.TempSetInt32">
-            <summary>Sets the shim of ForecastWeather.set_Temp(Int32 value)</summary>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.NineHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_NineHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.SixHourTempGet">
+            <summary>Sets the shim of ForecastWeather.get_SixHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.SixHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_SixHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.ThreeHourTempGet">
+            <summary>Sets the shim of ForecastWeather.get_ThreeHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.AllInstances.ThreeHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_ThreeHourTemp(Int32 value)</summary>
         </member>
         <member name="M:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.BehaveAsCurrent">
             <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
@@ -808,6 +967,12 @@
         <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.Constructor">
             <summary>Sets the shim of ForecastWeather.ForecastWeather()</summary>
         </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.ElevenHourTempGet">
+            <summary>Sets the shim of ForecastWeather.get_ElevenHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.ElevenHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_ElevenHourTemp(Int32 value)</summary>
+        </member>
         <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.ForecastToGet">
             <summary>Sets the shim of ForecastWeather.get_ForecastTo()</summary>
         </member>
@@ -826,11 +991,23 @@
         <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.IdSetGuid">
             <summary>Sets the shim of ForecastWeather.set_Id(Guid value)</summary>
         </member>
-        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.TempGet">
-            <summary>Sets the shim of ForecastWeather.get_Temp()</summary>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.NineHourTempGet">
+            <summary>Sets the shim of ForecastWeather.get_NineHourTemp()</summary>
         </member>
-        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.TempSetInt32">
-            <summary>Sets the shim of ForecastWeather.set_Temp(Int32 value)</summary>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.NineHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_NineHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.SixHourTempGet">
+            <summary>Sets the shim of ForecastWeather.get_SixHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.SixHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_SixHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.ThreeHourTempGet">
+            <summary>Sets the shim of ForecastWeather.get_ThreeHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.DAL.Model.Fakes.ShimForecastWeather.ThreeHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeather.set_ThreeHourTemp(Int32 value)</summary>
         </member>
         <member name="T:WeatherProrok.DAL.Model.Fakes.ShimPrecipitation">
             <summary>Shim type of WeatherProrok.DAL.Model.Precipitation</summary>

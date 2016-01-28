@@ -14,7 +14,7 @@ namespace WeatherProrok.Tests.Logic
     [TestClass]
     public class WeatherProcessorTests
     {
-        IWeatherProcessor processor = new WeatherProcessor(new GismeteoProvider(), new ForecastProcessor());
+        IWeatherProcessor processor = new WeatherProcessor(new GismeteoProvider(), new ForecastProcessor(), new FactWeatherProcessor());
 
         [TestMethod]
         public void SearchCityTest()

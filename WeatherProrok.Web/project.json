@@ -11,7 +11,7 @@
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
     "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-    "Microsoft.AspNet.SignalR.Server": "3.0.0-beta5",
+    "Microsoft.AspNet.SignalR.Server": "3.0.0-rc1-final",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
     "Microsoft.AspNet.Tooling.Razor": "1.0.0-rc1-final",
     "Microsoft.AspNet.WebSockets.Server": "1.0.0-rc1-final",
@@ -32,9 +32,11 @@
     "dnx451": {
       "dependencies": {
         "WeatherProrok.Logic": "1.0.0-*"
+      },
+      "frameworkAssemblies": {
+        "System.Web.Extensions": "4.0.0.0"
       }
-    },
-    "dnxcore50": { }
+    }
   },
 
   "exclude": [

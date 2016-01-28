@@ -6,3 +6,6 @@
 /artifacts/bin/
 /WeatherProrok.DAL/bin/
 /WeatherProrok.DAL/obj/
+/artifacts/obj/WeatherProrok.Web/Release
+/wrap/WeatherProrok.DAL/bin/Release/net451
+/wrap/WeatherProrok.Logic/bin/Release/net451

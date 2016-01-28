@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using WeatherProrok.Web.ViewModel;
+using WeatherProrok.Logic.Processors;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,23 +13,40 @@ namespace WeatherProrok.Web.Controllers.API
     [Route("api/[controller]")]
     public class WeatherController : Controller
     {
+        IWeatherProcessorForScheduler processor;
+        IFactWeatherProcessor factProcessor;
+        IForecastProcessor forecastProcessor;
+
+        public WeatherController(IWeatherProcessorForScheduler processor, IFactWeatherProcessor factProcessor, IForecastProcessor forecastProcessor)
+        {
+            this.processor = processor;
+            this.factProcessor = factProcessor;
+            this.forecastProcessor = forecastProcessor;
+        }
+
         // GET: api/weather/current
         [HttpGet("current")]
         public JsonResult GetCurrent()
         {
-            var list = new List<WeatherEntityViewModel>
-            {
-                new WeatherEntityViewModel { Id = Guid.NewGuid(), Name = "Some city", Cloudity = "clouds", CurrentDateTime = DateTime.Now.ToString("dd MMMM YYYY hh:mm"), Humidity = 40, Precipitation = "rain", Temp = 5 }
-            };
+            var list = processor.GetWeather().Select(x => WeatherEntityViewModel.ToWeatherEntityViewModel(x));
             return Json(list);
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        // GET api/weateher/fact
+        [HttpGet("fact")]
+        public JsonResult GetFact()
         {
-            return "value";
+            var factData = factProcessor.GetCurrentWeatherForAllCities().Select(x => CurrentWeatherViewModel.ToCurrentWeatherViewModel(x));
+            return Json(factData);
         }
+
+        // GET api/weather/forecast
+        [HttpGet("forecast")]
+        public JsonResult GetForecast()
+        {
+            var forecastData = forecastProcessor.GetForecastForAllCities();
+            return Json(forecastData);
+        } 
 
         // POST api/values
         [HttpPost]

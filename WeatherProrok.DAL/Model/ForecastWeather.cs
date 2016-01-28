@@ -15,7 +15,10 @@ namespace WeatherProrok.DAL.Model
         [Required]
         [ForeignKey("City")]
         public Guid CityId { get; set; }
-        public int Temp { get; set; }
+        public int ThreeHourTemp { get; set; }
+        public int SixHourTemp { get; set; }
+        public int NineHourTemp { get; set; }
+        public int ElevenHourTemp { get; set; }
         public int Humidity { get; set; }
         public DateTime ForecastTo { get; set; }
 

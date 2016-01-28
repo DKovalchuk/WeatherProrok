@@ -23,7 +23,7 @@ namespace WeatherProrok.DAL.Model
         public Guid CloudityId { get; set; }
         [ForeignKey("Precipitation")]
         public Guid PrecipitationId { get; set; }*/
-        public DateTime Updated { get; set; }
+        public DateTime? Updated { get; set; }
 
         public virtual City City { get; set; }
         /*public virtual Cloudity Cloudity { get; set; }

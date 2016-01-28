@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WeatherProrok.DAL</RootNamespace>
     <AssemblyName>WeatherProrok.DAL</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -66,6 +66,14 @@
     <Compile Include="Migrations\201601161019507_ChangeFactWeather1.Designer.cs">
       <DependentUpon>201601161019507_ChangeFactWeather1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601191001520_ChangeFactWeatherUpdate.cs" />
+    <Compile Include="Migrations\201601191001520_ChangeFactWeatherUpdate.Designer.cs">
+      <DependentUpon>201601191001520_ChangeFactWeatherUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601212127126_ChangeForecast.cs" />
+    <Compile Include="Migrations\201601212127126_ChangeForecast.Designer.cs">
+      <DependentUpon>201601212127126_ChangeForecast.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\City.cs" />
     <Compile Include="Model\Cloudity.cs" />
@@ -94,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601161019507_ChangeFactWeather1.resx">
       <DependentUpon>201601161019507_ChangeFactWeather1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601191001520_ChangeFactWeatherUpdate.resx">
+      <DependentUpon>201601191001520_ChangeFactWeatherUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601212127126_ChangeForecast.resx">
+      <DependentUpon>201601212127126_ChangeForecast.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

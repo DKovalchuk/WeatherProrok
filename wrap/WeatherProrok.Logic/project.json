@@ -12,6 +12,18 @@
         "Newtonsoft.Json": "8.0.2",
         "WeatherProrok.DAL": "1.0.0-*"
       }
+    },
+    "net451": {
+      "wrappedProject": "../../WeatherProrok.Logic/WeatherProrok.Logic.csproj",
+      "bin": {
+        "assembly": "../../WeatherProrok.Logic/obj/{configuration}/WeatherProrok.Logic.dll",
+        "pdb": "../../WeatherProrok.Logic/obj/{configuration}/WeatherProrok.Logic.pdb"
+      },
+      "dependencies": {
+        "HtmlAgilityPack": "1.4.9",
+        "Newtonsoft.Json": "8.0.2",
+        "WeatherProrok.DAL": "1.0.0-*"
+      }
     }
   }
 }

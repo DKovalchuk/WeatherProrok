@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherProrok.Logic", "WeatherProrok.Logic\WeatherProrok.Logic.csproj", "{7FC20014-ABCF-4A48-917C-229E82F59104}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherProrok.Tests", "WeatherProrok.Tests\WeatherProrok.Tests.csproj", "{D611B236-7CCF-43EC-AFCC-9A145A3A2302}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F03A421A-852E-4D07-9AB7-CF2458CE9169} = {F03A421A-852E-4D07-9AB7-CF2458CE9169}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherProrok.DAL", "WeatherProrok.DAL\WeatherProrok.DAL.csproj", "{5E5E15C2-897D-4545-A91D-A5FBFA94F5E3}"
 EndProject

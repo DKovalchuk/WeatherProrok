@@ -13,13 +13,15 @@ namespace WeatherProrok.Logic.Processors
 {
     public class WeatherProcessor : IWeatherProcessor, IWeatherProcessorForScheduler
     {
-        IWeatherProvider provider = null;
-        IForecastProcessor forecastProcessor = null;
+        IWeatherProvider provider;
+        IForecastProcessor forecastProcessor;
+        IFactWeatherProcessor factProcessor;
 
-        public WeatherProcessor(IWeatherProvider provider, IForecastProcessor forecastProcessor)
+        public WeatherProcessor(IWeatherProvider provider, IForecastProcessor forecastProcessor, IFactWeatherProcessor factProcessor)
         {
             this.provider = provider;
             this.forecastProcessor = forecastProcessor;
+            this.factProcessor = factProcessor;
         }
 
         public IEnumerable<SearchCityModel> SearchCity(string searchString)
@@ -34,13 +36,18 @@ namespace WeatherProrok.Logic.Processors
 
         public Guid AddCity(string cityId, string cityName)
         {
+            Guid id;
             using (IBaseRepository<City> repo = new BaseRepository<City>())
             {
-                return repo.Add(new City { Id = Guid.NewGuid(), CityProviderId = cityId, Name = cityName });
+                id = repo.Add(new City { Id = Guid.NewGuid(), CityProviderId = cityId, Name = cityName });
             }
+
+            ProcessWeatherForCity(id);
+
+            return id;
         }
 
-        public CurrentWeatherModel GetCurrentWeather(Guid cityId)
+        private CurrentWeatherModel GetCurrentWeather(Guid cityId)
         {
             var cityProviderId = string.Empty;
             using (IBaseRepository<City> repo = new BaseRepository<City>())
@@ -58,7 +65,7 @@ namespace WeatherProrok.Logic.Processors
             return provider.GetCurrentWeatherByCityID(cityProviderId);
         }
 
-        public CurrentWeatherModel GetCurrentWeather(string city)
+        private CurrentWeatherModel GetCurrentWeather(string city)
         {
             using (IBaseRepository<City> repo = new BaseRepository<City>())
             {
@@ -70,7 +77,7 @@ namespace WeatherProrok.Logic.Processors
             }
         }
 
-        public async Task<CurrentWeatherModel> GetCurrentWeatherAsync(Guid cityId)
+        private async Task<CurrentWeatherModel> GetCurrentWeatherAsync(Guid cityId)
         {
             var cityProviderId = string.Empty;
             using (IBaseRepository<City> repo = new BaseRepository<City>())
@@ -88,7 +95,7 @@ namespace WeatherProrok.Logic.Processors
             return await provider.GetCurrentWeatherByCityIDAsync(cityProviderId);
         }
 
-        public async Task<CurrentWeatherModel> GetCurrentWeatherAsync(string city)
+        private async Task<CurrentWeatherModel> GetCurrentWeatherAsync(string city)
         {
             using (IBaseRepository<City> repo = new BaseRepository<City>())
             {
@@ -102,7 +109,7 @@ namespace WeatherProrok.Logic.Processors
 
         private void ProcessForecastForCity(Guid cityId)
         {
-
+            forecastProcessor.ProcessForecastForCity(cityId);
         }
 
         public bool ProcessWeather()
@@ -113,41 +120,63 @@ namespace WeatherProrok.Logic.Processors
             {
                 try
                 {
-                    var currentWeather = GetCurrentWeather(city.ProviderCityId);
-                    if(currentWeather != null)
-                    {
-                        var lastWeatherUpdateTime = DateTime.MinValue;
-                        using (IBaseRepository<FactWeather> weatherRepo = new BaseRepository<FactWeather>())
-                        {
-                            var lastWeather = weatherRepo.GetAll().OrderBy(x => x.Updated).LastOrDefault();
-                            if (lastWeather != null)
-                                lastWeatherUpdateTime = lastWeather.Updated;
-
-                            if(currentWeather.CurrentDateTime > lastWeatherUpdateTime)
-                            {
-                                weatherRepo.Add(new FactWeather
-                                {
-                                    Id = Guid.NewGuid(),
-                                    CityId = city.Id,
-                                    Cloudity = (int)currentWeather.Cloudity,
-                                    Precipitations = (int)currentWeather.Precipitation,
-                                    Humidity = currentWeather.Humidity,
-                                    Temp = currentWeather.Temp,
-                                    Updated = currentWeather.CurrentDateTime
-                                });
-
-                                isUpdated = true;
-
-                                ProcessForecastForCity(city.Id);
-                            }
-                        }
-                    }
+                    if (ProcessWeatherForCity(city))
+                        isUpdated = true;
                 }
                 catch(Exception ex)
                 {
                     // TODO: Logging it
+                    throw;
                 }
             }
+            return isUpdated;
+        }
+
+        private bool ProcessWeatherForCity(Guid cityId)
+        {
+            using (IBaseRepository<City> repo = new BaseRepository<City>())
+            {
+                var city = repo.GetById(cityId);
+                if (city == null)
+                    throw new Exception("City not found in database");
+
+                return ProcessWeatherForCity(CityModel.ToCityModel(city));
+            }
+        }
+
+        private bool ProcessWeatherForCity(CityModel city)
+        {
+            bool isUpdated = false;
+            var currentWeather = GetCurrentWeather(city.Id);
+            if (currentWeather != null)
+            {
+                var lastWeatherUpdateTime = DateTime.MinValue;
+                using (IBaseRepository<FactWeather> weatherRepo = new BaseRepository<FactWeather>())
+                {
+                    var lastWeather = weatherRepo.GetBy(x => x.CityId == city.Id).Max(x => x.Updated);
+                    if (lastWeather != null)
+                        lastWeatherUpdateTime = lastWeather.Value;
+
+                    if (currentWeather.CurrentDateTime > lastWeatherUpdateTime)
+                    {
+                        weatherRepo.Add(new FactWeather
+                        {
+                            Id = Guid.NewGuid(),
+                            CityId = city.Id,
+                            Cloudity = (int)currentWeather.Cloudity,
+                            Precipitations = (int)currentWeather.Precipitation,
+                            Humidity = currentWeather.Humidity,
+                            Temp = currentWeather.Temp,
+                            Updated = currentWeather.CurrentDateTime
+                        });
+
+                        isUpdated = true;
+
+                        ProcessForecastForCity(city.Id);
+                    }
+                }
+            }
+
             return isUpdated;
         }
 
@@ -165,9 +194,9 @@ namespace WeatherProrok.Logic.Processors
                         var lastWeatherUpdateTime = DateTime.MinValue;
                         using (IBaseRepository<FactWeather> weatherRepo = new BaseRepository<FactWeather>())
                         {
-                            var lastWeather = weatherRepo.GetAll().OrderBy(x => x.Updated).LastOrDefault();
+                            var lastWeather = weatherRepo.GetAll().Max(x => x.Updated);
                             if (lastWeather != null)
-                                lastWeatherUpdateTime = lastWeather.Updated;
+                                lastWeatherUpdateTime = lastWeather.Value;
 
                             if (currentWeather.CurrentDateTime > lastWeatherUpdateTime)
                             {
@@ -197,11 +226,30 @@ namespace WeatherProrok.Logic.Processors
             return isUpdated;
         }
 
+        public IEnumerable<WeatherModel> GetWeather()
+        {
+            var list = new List<WeatherModel>();
+            foreach(var city in GetCities())
+            {
+                var current = factProcessor.GetCurrentWeather(city.Id);
+                var forecast = forecastProcessor.GetForecastForCity(city.Id);
+
+                list.Add(new WeatherModel
+                {
+                    City = city,
+                    Current = current,
+                    Forecast = forecast
+                });
+            }
+
+            return list;
+        }
+
         private IEnumerable<CityModel> GetCities()
         {
             using (IBaseRepository<City> cityRepo = new BaseRepository<City>())
             {
-                return cityRepo.GetAll().Select(x => x.ToCityModel()).ToList();
+                return cityRepo.GetAll().ToList().Select(x => x.ToCityModel());
             }
         }
     }

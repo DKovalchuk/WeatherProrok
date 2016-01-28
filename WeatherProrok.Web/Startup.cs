@@ -6,14 +6,19 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-//using Microsoft.Framework.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Framework.DependencyInjection;
+using WeatherProrok.Web.Store;
+using WeatherProrok.Logic.Processors;
+using Microsoft.AspNet.SignalR;
+using WeatherProrok.Logic.Repositories;
+using WeatherProrok.Logic.Providers;
 
 namespace WeatherProrok.Web
 {
     public class Startup
     {
+        WeatherProcessorScheduler scheduler = null;
+
         public Startup(IHostingEnvironment env)
         {
             // Set up configuration sources.
@@ -37,9 +42,17 @@ namespace WeatherProrok.Web
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
-            (services as Microsoft.Framework.DependencyInjection.IServiceCollection).AddSignalR();
+            services.AddSingleton<ISearchCityStore, SearchCityStore>();
+            services.AddSingleton<IWeatherProcessor, WeatherProcessor>();
+            services.AddSingleton<IFactWeatherProcessor, FactWeatherProcessor>();
+            services.AddSingleton<IForecastProcessor, ForecastProcessor>();
+            services.AddTransient<ICityRepository, CityRepository>();
+            services.AddSingleton<IWeatherProcessorForScheduler, WeatherProcessor>();
+            services.AddSingleton<IWeatherProvider, GismeteoProvider>();
 
-            services.AddMvc();
+            services.AddSignalR();
+
+            services.AddMvc(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,7 +81,7 @@ namespace WeatherProrok.Web
 
             app.UseWebSockets();
 
-            //app.UseSignalR();
+            app.UseSignalR(); 
 
             app.UseMvc(routes =>
             {
@@ -76,11 +89,14 @@ namespace WeatherProrok.Web
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-
             
+            scheduler = new WeatherProcessorScheduler(new Logic.Processors.WeatherProcessor(new Logic.Providers.GismeteoProvider(), new Logic.Processors.ForecastProcessor(), new FactWeatherProcessor()), new ForecastProcessor());
         }
 
         // Entry point for the application.
-        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
+        public static void Main(string[] args)
+        {
+            WebApplication.Run<Startup>(args);
+        }
     }
 }

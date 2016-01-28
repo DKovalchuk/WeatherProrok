@@ -124,6 +124,9 @@
         <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCityModel.ProviderCityIdSetString">
             <summary>Sets the shim of CityModel.set_ProviderCityId(String value)</summary>
         </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCityModel.ToCityModelCity">
+            <summary>Sets the shim of CityModel.ToCityModel(City model)</summary>
+        </member>
         <member name="T:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel">
             <summary>Shim type of WeatherProrok.Logic.Models.CurrentWeatherModel</summary>
         </member>
@@ -135,6 +138,12 @@
         </member>
         <member name="T:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.AllInstances">
             <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.AllInstances.CityGet">
+            <summary>Sets the shim of CurrentWeatherModel.get_City()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.AllInstances.CitySetCityModel">
+            <summary>Sets the shim of CurrentWeatherModel.set_City(CityModel value)</summary>
         </member>
         <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.AllInstances.CloudityGet">
             <summary>Sets the shim of CurrentWeatherModel.get_Cloudity()</summary>
@@ -175,6 +184,12 @@
         <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.Behavior">
             <summary>Assigns the behavior for all methods of the shimmed type</summary>
         </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.CityGet">
+            <summary>Sets the shim of CurrentWeatherModel.get_City()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.CitySetCityModel">
+            <summary>Sets the shim of CurrentWeatherModel.set_City(CityModel value)</summary>
+        </member>
         <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.CloudityGet">
             <summary>Sets the shim of CurrentWeatherModel.get_Cloudity()</summary>
         </member>
@@ -207,6 +222,105 @@
         </member>
         <member name="P:WeatherProrok.Logic.Models.Fakes.ShimCurrentWeatherModel.TempSetInt32">
             <summary>Sets the shim of CurrentWeatherModel.set_Temp(Int32 value)</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel">
+            <summary>Shim type of WeatherProrok.Logic.Models.ForecastWeatherModel</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.#ctor(WeatherProrok.Logic.Models.ForecastWeatherModel)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.ElevenHourTempGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_ElevenHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.ElevenHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeatherModel.set_ElevenHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.ForecastToGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_ForecastTo()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.ForecastToSetDateTime">
+            <summary>Sets the shim of ForecastWeatherModel.set_ForecastTo(DateTime value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.IdGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.IdSetGuid">
+            <summary>Sets the shim of ForecastWeatherModel.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.NineHourTempGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_NineHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.NineHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeatherModel.set_NineHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.SixHourTempGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_SixHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.SixHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeatherModel.set_SixHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.ThreeHourTempGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_ThreeHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.AllInstances.ThreeHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeatherModel.set_ThreeHourTemp(Int32 value)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.Constructor">
+            <summary>Sets the shim of ForecastWeatherModel.ForecastWeatherModel()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.ElevenHourTempGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_ElevenHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.ElevenHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeatherModel.set_ElevenHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.ForecastToGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_ForecastTo()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.ForecastToSetDateTime">
+            <summary>Sets the shim of ForecastWeatherModel.set_ForecastTo(DateTime value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.IdGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_Id()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.IdSetGuid">
+            <summary>Sets the shim of ForecastWeatherModel.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.NineHourTempGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_NineHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.NineHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeatherModel.set_NineHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.SixHourTempGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_SixHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.SixHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeatherModel.set_SixHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.ThreeHourTempGet">
+            <summary>Sets the shim of ForecastWeatherModel.get_ThreeHourTemp()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.ThreeHourTempSetInt32">
+            <summary>Sets the shim of ForecastWeatherModel.set_ThreeHourTemp(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimForecastWeatherModel.ToForecastWeatherModelForecastWeather">
+            <summary>Sets the shim of ForecastWeatherModel.ToForecastWeatherModel(ForecastWeather model)</summary>
         </member>
         <member name="T:WeatherProrok.Logic.Models.Fakes.ShimGismeteoResponceItemModel">
             <summary>Shim type of WeatherProrok.Logic.Models.GismeteoResponceItemModel</summary>
@@ -400,6 +514,66 @@
         <member name="P:WeatherProrok.Logic.Models.Fakes.ShimSearchCityModel.NameSetString">
             <summary>Sets the shim of SearchCityModel.set_Name(String value)</summary>
         </member>
+        <member name="T:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel">
+            <summary>Shim type of WeatherProrok.Logic.Models.WeatherModel</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.#ctor(WeatherProrok.Logic.Models.WeatherModel)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.AllInstances.CityGet">
+            <summary>Sets the shim of WeatherModel.get_City()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.AllInstances.CitySetCityModel">
+            <summary>Sets the shim of WeatherModel.set_City(CityModel value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.AllInstances.CurrentGet">
+            <summary>Sets the shim of WeatherModel.get_Current()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.AllInstances.CurrentSetCurrentWeatherModel">
+            <summary>Sets the shim of WeatherModel.set_Current(CurrentWeatherModel value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.AllInstances.ForecastGet">
+            <summary>Sets the shim of WeatherModel.get_Forecast()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.AllInstances.ForecastSetForecastWeatherModel">
+            <summary>Sets the shim of WeatherModel.set_Forecast(ForecastWeatherModel value)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.CityGet">
+            <summary>Sets the shim of WeatherModel.get_City()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.CitySetCityModel">
+            <summary>Sets the shim of WeatherModel.set_City(CityModel value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.Constructor">
+            <summary>Sets the shim of WeatherModel.WeatherModel()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.CurrentGet">
+            <summary>Sets the shim of WeatherModel.get_Current()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.CurrentSetCurrentWeatherModel">
+            <summary>Sets the shim of WeatherModel.set_Current(CurrentWeatherModel value)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.ForecastGet">
+            <summary>Sets the shim of WeatherModel.get_Forecast()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.ShimWeatherModel.ForecastSetForecastWeatherModel">
+            <summary>Sets the shim of WeatherModel.set_Forecast(ForecastWeatherModel value)</summary>
+        </member>
         <member name="T:WeatherProrok.Logic.Models.Fakes.StubCityModel">
             <summary>Stub type of WeatherProrok.Logic.Models.CityModel</summary>
         </member>
@@ -434,6 +608,24 @@
             <summary>Gets or sets the instance behavior.</summary>
         </member>
         <member name="P:WeatherProrok.Logic.Models.Fakes.StubCurrentWeatherModel.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Models.Fakes.StubForecastWeatherModel">
+            <summary>Stub type of WeatherProrok.Logic.Models.ForecastWeatherModel</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.StubForecastWeatherModel.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.StubForecastWeatherModel.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.StubForecastWeatherModel.InitializeStub">
+            <summary>Initializes a new instance of type StubForecastWeatherModel</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.StubForecastWeatherModel.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.StubForecastWeatherModel.InstanceObserver">
             <summary>Gets or sets the instance observer.</summary>
         </member>
         <member name="T:WeatherProrok.Logic.Models.Fakes.StubGismeteoResponceItemModel">
@@ -490,6 +682,69 @@
         <member name="P:WeatherProrok.Logic.Models.Fakes.StubSearchCityModel.InstanceObserver">
             <summary>Gets or sets the instance observer.</summary>
         </member>
+        <member name="T:WeatherProrok.Logic.Models.Fakes.StubWeatherModel">
+            <summary>Stub type of WeatherProrok.Logic.Models.WeatherModel</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.StubWeatherModel.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.StubWeatherModel.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Models.Fakes.StubWeatherModel.InitializeStub">
+            <summary>Initializes a new instance of type StubWeatherModel</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.StubWeatherModel.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Models.Fakes.StubWeatherModel.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor">
+            <summary>Shim type of WeatherProrok.Logic.Processors.FactWeatherProcessor</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.#ctor(WeatherProrok.Logic.Processors.FactWeatherProcessor)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.AllInstances.GetCurrentWeatherForAllCities">
+            <summary>Sets the shim of FactWeatherProcessor.GetCurrentWeatherForAllCities()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.AllInstances.GetCurrentWeatherGuid">
+            <summary>Sets the shim of FactWeatherProcessor.GetCurrentWeather(Guid cityId)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.AllInstances.GetWeatherForCityGuid">
+            <summary>Sets the shim of FactWeatherProcessor.GetWeatherForCity(Guid cityId)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.Bind(WeatherProrok.Logic.Processors.IFactWeatherProcessor)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.Constructor">
+            <summary>Sets the shim of FactWeatherProcessor.FactWeatherProcessor()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.GetCurrentWeatherForAllCities">
+            <summary>Sets the shim of FactWeatherProcessor.GetCurrentWeatherForAllCities()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.GetCurrentWeatherGuid">
+            <summary>Sets the shim of FactWeatherProcessor.GetCurrentWeather(Guid cityId)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimFactWeatherProcessor.GetWeatherForCityGuid">
+            <summary>Sets the shim of FactWeatherProcessor.GetWeatherForCity(Guid cityId)</summary>
+        </member>
         <member name="T:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor">
             <summary>Shim type of WeatherProrok.Logic.Processors.ForecastProcessor</summary>
         </member>
@@ -501,6 +756,24 @@
         </member>
         <member name="T:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.AllInstances">
             <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.AllInstances.GetForecastForAllCities">
+            <summary>Sets the shim of ForecastProcessor.GetForecastForAllCities()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.AllInstances.GetForecastForCityGuid">
+            <summary>Sets the shim of ForecastProcessor.GetForecastForCity(Guid cityId)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.AllInstances.ProcessForecastForAllCities">
+            <summary>Sets the shim of ForecastProcessor.ProcessForecastForAllCities()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.AllInstances.ProcessForecastForCityGuid">
+            <summary>Sets the shim of ForecastProcessor.ProcessForecastForCity(Guid cityId)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.AllInstances.SixHoursTrendIEnumerableOfCurrentWeatherModel">
+            <summary>Sets the shim of ForecastProcessor.SixHoursTrend(IEnumerable`1&lt;CurrentWeatherModel&gt; model)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.AllInstances.ThreeHoursTrendIEnumerableOfCurrentWeatherModel">
+            <summary>Sets the shim of ForecastProcessor.ThreeHoursTrend(IEnumerable`1&lt;CurrentWeatherModel&gt; model)</summary>
         </member>
         <member name="M:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.BehaveAsCurrent">
             <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
@@ -516,6 +789,27 @@
         </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.Constructor">
             <summary>Sets the shim of ForecastProcessor.ForecastProcessor()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.ConstructorIFactWeatherProcessor">
+            <summary>Sets the shim of ForecastProcessor.ForecastProcessor(IFactWeatherProcessor factProcessor)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.GetForecastForAllCities">
+            <summary>Sets the shim of ForecastProcessor.GetForecastForAllCities()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.GetForecastForCityGuid">
+            <summary>Sets the shim of ForecastProcessor.GetForecastForCity(Guid cityId)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.ProcessForecastForAllCities">
+            <summary>Sets the shim of ForecastProcessor.ProcessForecastForAllCities()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.ProcessForecastForCityGuid">
+            <summary>Sets the shim of ForecastProcessor.ProcessForecastForCity(Guid cityId)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.SixHoursTrendIEnumerableOfCurrentWeatherModel">
+            <summary>Sets the shim of ForecastProcessor.SixHoursTrend(IEnumerable`1&lt;CurrentWeatherModel&gt; model)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimForecastProcessor.ThreeHoursTrendIEnumerableOfCurrentWeatherModel">
+            <summary>Sets the shim of ForecastProcessor.ThreeHoursTrend(IEnumerable`1&lt;CurrentWeatherModel&gt; model)</summary>
         </member>
         <member name="T:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor">
             <summary>Shim type of WeatherProrok.Logic.Processors.WeatherProcessor</summary>
@@ -550,6 +844,9 @@
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.AllInstances.GetCurrentWeatherString">
             <summary>Sets the shim of WeatherProcessor.GetCurrentWeather(String city)</summary>
         </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.AllInstances.GetWeather">
+            <summary>Sets the shim of WeatherProcessor.GetWeather()</summary>
+        </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.AllInstances.ProcessForecastForCityGuid">
             <summary>Sets the shim of WeatherProcessor.ProcessForecastForCity(Guid cityId)</summary>
         </member>
@@ -558,6 +855,12 @@
         </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.AllInstances.ProcessWeatherAsync">
             <summary>Sets the shim of WeatherProcessor.ProcessWeatherAsync()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.AllInstances.ProcessWeatherForCityCityModel">
+            <summary>Sets the shim of WeatherProcessor.ProcessWeatherForCity(CityModel city)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.AllInstances.ProcessWeatherForCityGuid">
+            <summary>Sets the shim of WeatherProcessor.ProcessWeatherForCity(Guid cityId)</summary>
         </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.AllInstances.SearchCityAsyncString">
             <summary>Sets the shim of WeatherProcessor.SearchCityAsync(String searchString)</summary>
@@ -580,8 +883,8 @@
         <member name="M:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.Bind(WeatherProrok.Logic.Processors.IWeatherProcessorForScheduler)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.ConstructorIWeatherProviderIForecastProcessor">
-            <summary>Sets the shim of WeatherProcessor.WeatherProcessor(IWeatherProvider provider, IForecastProcessor forecastProcessor)</summary>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.ConstructorIWeatherProviderIForecastProcessorIFactWeatherProcessor">
+            <summary>Sets the shim of WeatherProcessor.WeatherProcessor(IWeatherProvider provider, IForecastProcessor forecastProcessor, IFactWeatherProcessor factProcessor)</summary>
         </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.GetCities">
             <summary>Sets the shim of WeatherProcessor.GetCities()</summary>
@@ -598,6 +901,9 @@
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.GetCurrentWeatherString">
             <summary>Sets the shim of WeatherProcessor.GetCurrentWeather(String city)</summary>
         </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.GetWeather">
+            <summary>Sets the shim of WeatherProcessor.GetWeather()</summary>
+        </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.ProcessForecastForCityGuid">
             <summary>Sets the shim of WeatherProcessor.ProcessForecastForCity(Guid cityId)</summary>
         </member>
@@ -607,16 +913,43 @@
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.ProcessWeatherAsync">
             <summary>Sets the shim of WeatherProcessor.ProcessWeatherAsync()</summary>
         </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.ProcessWeatherForCityCityModel">
+            <summary>Sets the shim of WeatherProcessor.ProcessWeatherForCity(CityModel city)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.ProcessWeatherForCityGuid">
+            <summary>Sets the shim of WeatherProcessor.ProcessWeatherForCity(Guid cityId)</summary>
+        </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.SearchCityAsyncString">
             <summary>Sets the shim of WeatherProcessor.SearchCityAsync(String searchString)</summary>
         </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.ShimWeatherProcessor.SearchCityString">
             <summary>Sets the shim of WeatherProcessor.SearchCity(String searchString)</summary>
         </member>
+        <member name="T:WeatherProrok.Logic.Processors.Fakes.StubFactWeatherProcessor">
+            <summary>Stub type of WeatherProrok.Logic.Processors.FactWeatherProcessor</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubFactWeatherProcessor.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.StubFactWeatherProcessor.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubFactWeatherProcessor.InitializeStub">
+            <summary>Initializes a new instance of type StubFactWeatherProcessor</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.StubFactWeatherProcessor.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Processors.Fakes.StubFactWeatherProcessor.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
         <member name="T:WeatherProrok.Logic.Processors.Fakes.StubForecastProcessor">
             <summary>Stub type of WeatherProrok.Logic.Processors.ForecastProcessor</summary>
         </member>
         <member name="M:WeatherProrok.Logic.Processors.Fakes.StubForecastProcessor.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubForecastProcessor.#ctor(WeatherProrok.Logic.Processors.IFactWeatherProcessor)">
             <summary>Initializes a new instance</summary>
         </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.StubForecastProcessor.CallBase">
@@ -631,11 +964,59 @@
         <member name="P:WeatherProrok.Logic.Processors.Fakes.StubForecastProcessor.InstanceObserver">
             <summary>Gets or sets the instance observer.</summary>
         </member>
+        <member name="T:WeatherProrok.Logic.Processors.Fakes.StubIFactWeatherProcessor">
+            <summary>Stub type of WeatherProrok.Logic.Processors.IFactWeatherProcessor</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIFactWeatherProcessor.#ctor">
+            <summary>Initializes a new instance of type StubIFactWeatherProcessor</summary>
+        </member>
+        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIFactWeatherProcessor.GetCurrentWeatherForAllCities">
+            <summary>Sets the stub of IFactWeatherProcessor.GetCurrentWeatherForAllCities()</summary>
+        </member>
+        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIFactWeatherProcessor.GetCurrentWeatherGuid">
+            <summary>Sets the stub of IFactWeatherProcessor.GetCurrentWeather(Guid cityId)</summary>
+        </member>
+        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIFactWeatherProcessor.GetWeatherForCityGuid">
+            <summary>Sets the stub of IFactWeatherProcessor.GetWeatherForCity(Guid cityId)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIFactWeatherProcessor.WeatherProrok#Logic#Processors#IFactWeatherProcessor#GetCurrentWeather(System.Guid)">
+            <summary>Sets the stub of IFactWeatherProcessor.GetCurrentWeather(Guid cityId)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIFactWeatherProcessor.WeatherProrok#Logic#Processors#IFactWeatherProcessor#GetCurrentWeatherForAllCities">
+            <summary>Sets the stub of IFactWeatherProcessor.GetCurrentWeatherForAllCities()</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIFactWeatherProcessor.WeatherProrok#Logic#Processors#IFactWeatherProcessor#GetWeatherForCity(System.Guid)">
+            <summary>Sets the stub of IFactWeatherProcessor.GetWeatherForCity(Guid cityId)</summary>
+        </member>
         <member name="T:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor">
             <summary>Stub type of WeatherProrok.Logic.Processors.IForecastProcessor</summary>
         </member>
         <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.#ctor">
             <summary>Initializes a new instance of type StubIForecastProcessor</summary>
+        </member>
+        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.GetForecastForAllCities">
+            <summary>Sets the stub of IForecastProcessor.GetForecastForAllCities()</summary>
+        </member>
+        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.GetForecastForCityGuid">
+            <summary>Sets the stub of IForecastProcessor.GetForecastForCity(Guid cityId)</summary>
+        </member>
+        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.ProcessForecastForAllCities">
+            <summary>Sets the stub of IForecastProcessor.ProcessForecastForAllCities()</summary>
+        </member>
+        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.ProcessForecastForCityGuid">
+            <summary>Sets the stub of IForecastProcessor.ProcessForecastForCity(Guid cityId)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.WeatherProrok#Logic#Processors#IForecastProcessor#GetForecastForAllCities">
+            <summary>Sets the stub of IForecastProcessor.GetForecastForAllCities()</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.WeatherProrok#Logic#Processors#IForecastProcessor#GetForecastForCity(System.Guid)">
+            <summary>Sets the stub of IForecastProcessor.GetForecastForCity(Guid cityId)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.WeatherProrok#Logic#Processors#IForecastProcessor#ProcessForecastForAllCities">
+            <summary>Sets the stub of IForecastProcessor.ProcessForecastForAllCities()</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIForecastProcessor.WeatherProrok#Logic#Processors#IForecastProcessor#ProcessForecastForCity(System.Guid)">
+            <summary>Sets the stub of IForecastProcessor.ProcessForecastForCity(Guid cityId)</summary>
         </member>
         <member name="T:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor">
             <summary>Stub type of WeatherProrok.Logic.Processors.IWeatherProcessor</summary>
@@ -645,18 +1026,6 @@
         </member>
         <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.AddCityStringString">
             <summary>Sets the stub of IWeatherProcessor.AddCity(String cityId, String cityName)</summary>
-        </member>
-        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.GetCurrentWeatherAsyncGuid">
-            <summary>Sets the stub of IWeatherProcessor.GetCurrentWeatherAsync(Guid cityId)</summary>
-        </member>
-        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.GetCurrentWeatherAsyncString">
-            <summary>Sets the stub of IWeatherProcessor.GetCurrentWeatherAsync(String city)</summary>
-        </member>
-        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.GetCurrentWeatherGuid">
-            <summary>Sets the stub of IWeatherProcessor.GetCurrentWeather(Guid cityId)</summary>
-        </member>
-        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.GetCurrentWeatherString">
-            <summary>Sets the stub of IWeatherProcessor.GetCurrentWeather(String city)</summary>
         </member>
         <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.ProcessWeather">
             <summary>Sets the stub of IWeatherProcessor.ProcessWeather()</summary>
@@ -672,18 +1041,6 @@
         </member>
         <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.WeatherProrok#Logic#Processors#IWeatherProcessor#AddCity(System.String,System.String)">
             <summary>Sets the stub of IWeatherProcessor.AddCity(String cityId, String cityName)</summary>
-        </member>
-        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.WeatherProrok#Logic#Processors#IWeatherProcessor#GetCurrentWeather(System.Guid)">
-            <summary>Sets the stub of IWeatherProcessor.GetCurrentWeather(Guid cityId)</summary>
-        </member>
-        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.WeatherProrok#Logic#Processors#IWeatherProcessor#GetCurrentWeather(System.String)">
-            <summary>Sets the stub of IWeatherProcessor.GetCurrentWeather(String city)</summary>
-        </member>
-        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.WeatherProrok#Logic#Processors#IWeatherProcessor#GetCurrentWeatherAsync(System.String)">
-            <summary>Sets the stub of IWeatherProcessor.GetCurrentWeatherAsync(String city)</summary>
-        </member>
-        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.WeatherProrok#Logic#Processors#IWeatherProcessor#GetCurrentWeatherAsync(System.Guid)">
-            <summary>Sets the stub of IWeatherProcessor.GetCurrentWeatherAsync(Guid cityId)</summary>
         </member>
         <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessor.WeatherProrok#Logic#Processors#IWeatherProcessor#ProcessWeather">
             <summary>Sets the stub of IWeatherProcessor.ProcessWeather()</summary>
@@ -703,8 +1060,14 @@
         <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessorForScheduler.#ctor">
             <summary>Initializes a new instance of type StubIWeatherProcessorForScheduler</summary>
         </member>
+        <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessorForScheduler.GetWeather">
+            <summary>Sets the stub of IWeatherProcessorForScheduler.GetWeather()</summary>
+        </member>
         <member name="F:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessorForScheduler.ProcessWeather">
             <summary>Sets the stub of IWeatherProcessorForScheduler.ProcessWeather()</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessorForScheduler.WeatherProrok#Logic#Processors#IWeatherProcessorForScheduler#GetWeather">
+            <summary>Sets the stub of IWeatherProcessorForScheduler.GetWeather()</summary>
         </member>
         <member name="M:WeatherProrok.Logic.Processors.Fakes.StubIWeatherProcessorForScheduler.WeatherProrok#Logic#Processors#IWeatherProcessorForScheduler#ProcessWeather">
             <summary>Sets the stub of IWeatherProcessorForScheduler.ProcessWeather()</summary>
@@ -712,7 +1075,7 @@
         <member name="T:WeatherProrok.Logic.Processors.Fakes.StubWeatherProcessor">
             <summary>Stub type of WeatherProrok.Logic.Processors.WeatherProcessor</summary>
         </member>
-        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubWeatherProcessor.#ctor(WeatherProrok.Logic.Providers.IWeatherProvider,WeatherProrok.Logic.Processors.IForecastProcessor)">
+        <member name="M:WeatherProrok.Logic.Processors.Fakes.StubWeatherProcessor.#ctor(WeatherProrok.Logic.Providers.IWeatherProvider,WeatherProrok.Logic.Processors.IForecastProcessor,WeatherProrok.Logic.Processors.IFactWeatherProcessor)">
             <summary>Initializes a new instance</summary>
         </member>
         <member name="P:WeatherProrok.Logic.Processors.Fakes.StubWeatherProcessor.CallBase">
@@ -897,6 +1260,75 @@
         </member>
         <member name="M:WeatherProrok.Logic.Providers.Fakes.StubIWeatherProvider.WeatherProrok#Logic#Providers#IWeatherProvider#SearchCityAsync(System.String)">
             <summary>Sets the stub of IWeatherProvider.SearchCityAsync(String search)</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository">
+            <summary>Shim type of WeatherProrok.Logic.Repositories.CityRepository</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.#ctor(WeatherProrok.Logic.Repositories.CityRepository)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.AllInstances.GetCityGuid">
+            <summary>Sets the shim of CityRepository.GetCity(Guid id)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.Bind(WeatherProrok.Logic.Repositories.ICityRepository)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.Constructor">
+            <summary>Sets the shim of CityRepository.CityRepository()</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.ConstructorIBaseRepositoryOfCity">
+            <summary>Sets the shim of CityRepository.CityRepository(IBaseRepository`1&lt;City&gt; repository)</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Repositories.Fakes.ShimCityRepository.GetCityGuid">
+            <summary>Sets the shim of CityRepository.GetCity(Guid id)</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Repositories.Fakes.StubCityRepository">
+            <summary>Stub type of WeatherProrok.Logic.Repositories.CityRepository</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.StubCityRepository.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.StubCityRepository.#ctor(WeatherProrok.DAL.Repository.IBaseRepository{WeatherProrok.DAL.Model.City})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Repositories.Fakes.StubCityRepository.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.StubCityRepository.InitializeStub">
+            <summary>Initializes a new instance of type StubCityRepository</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Repositories.Fakes.StubCityRepository.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherProrok.Logic.Repositories.Fakes.StubCityRepository.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherProrok.Logic.Repositories.Fakes.StubICityRepository">
+            <summary>Stub type of WeatherProrok.Logic.Repositories.ICityRepository</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.StubICityRepository.#ctor">
+            <summary>Initializes a new instance of type StubICityRepository</summary>
+        </member>
+        <member name="F:WeatherProrok.Logic.Repositories.Fakes.StubICityRepository.GetCityGuid">
+            <summary>Sets the stub of ICityRepository.GetCity(Guid id)</summary>
+        </member>
+        <member name="M:WeatherProrok.Logic.Repositories.Fakes.StubICityRepository.WeatherProrok#Logic#Repositories#ICityRepository#GetCity(System.Guid)">
+            <summary>Sets the stub of ICityRepository.GetCity(Guid id)</summary>
         </member>
     </members>
 </doc>

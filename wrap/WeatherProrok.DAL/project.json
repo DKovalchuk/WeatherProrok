@@ -10,6 +10,16 @@
       "dependencies": {
         "EntityFramework": "6.1.3"
       }
+    },
+    "net451": {
+      "wrappedProject": "../../WeatherProrok.DAL/WeatherProrok.DAL.csproj",
+      "bin": {
+        "assembly": "../../WeatherProrok.DAL/obj/{configuration}/WeatherProrok.DAL.dll",
+        "pdb": "../../WeatherProrok.DAL/obj/{configuration}/WeatherProrok.DAL.pdb"
+      },
+      "dependencies": {
+        "EntityFramework": "6.1.2"
+      }
     }
   }
 }

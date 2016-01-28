@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace WeatherProrok.Logic.Models
 {
+    [Serializable]
     public class SearchCityModel
     {
         public string Id { get; set; }

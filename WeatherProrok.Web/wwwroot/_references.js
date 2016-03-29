@@ -6,6 +6,7 @@
 /// <reference path="lib/angular-signalr-hub/signalr-hub.js" />
 /// <reference path="lib/bootstrap/dist/js/bootstrap.js" />
 /// <reference path="lib/bootstrap3-typeahead/bootstrap3-typeahead.js" />
+/// <reference path="lib/datatables/media/js/jquery.dataTables.js" />
 /// <reference path="lib/jquery/dist/jquery.js" />
 /// <reference path="lib/jquery-validation/dist/jquery.validate.js" />
 /// <reference path="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" />

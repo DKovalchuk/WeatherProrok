@@ -10,6 +10,7 @@
     "bootstrap3-typeahead": "~4.0.0",
     "weather-icons": "~2.0.10",
     "angular-signalr-hub": "~1.5.0",
-    "morrisjs": "~0.5.1"
+    "morrisjs": "~0.5.1",
+    "DataTables": "~1.10.11"
   }
 }

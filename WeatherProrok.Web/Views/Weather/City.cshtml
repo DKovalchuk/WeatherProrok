@@ -3,6 +3,7 @@
 @model WeatherProrok.Web.ViewModel.CityWeatherDetailsViewModel
 
 <link rel="stylesheet" href="~/lib/morrisjs/morris.css" />
+<link rel="stylesheet" href="~/lib/DataTables/media/css/dataTables.bootstrap.min.css" />
 
 <div class="container">
     @Html.LabelFor(x => x.City.Name): @Html.DisplayFor(x => x.City.Name)
@@ -45,9 +46,13 @@
 @section scripts{
     <script src="~/lib/raphael/raphael.js"></script>
     <script src="~/lib/morrisjs/morris.js"></script>
+<script src="~/lib/DataTables/media/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/DataTables/media/js/dataTables.bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var data = $.parseJSON('@Html.Raw(new JavaScriptSerializer().Serialize(Model.Weather))');
+            $('table.table').dataTable();
+
+            var data = $.parseJSON('@Html.Raw(new JavaScriptSerializer().Serialize(Model.Weather.OrderByDescending(x => x.CurrentDateTime).Take(10)))');
             new Morris.Line({
                 element: 'tempChart',
                 data: data,

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WeatherProrok.Web
 {
+    /// <summary>
+    /// Store SignalR connection manager to use it in code outside the controllers
+    /// </summary>
     public class SignalRConnectionManager
     {
         static IConnectionManager connectionManager;

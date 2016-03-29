@@ -1,3 +1,7 @@
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for <>f__AnonymousType0`2: type is sealed.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for <>f__AnonymousType1`6: type is sealed.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for <>f__AnonymousType2`4: type is sealed.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for <>f__AnonymousType3`3: type is sealed.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for WeatherProrok.DAL.Migrations.InitDB: type is sealed.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for WeatherProrok.DAL.Migrations.AddKeys: type is sealed.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for WeatherProrok.DAL.Migrations.ChangeFactWeather: type is sealed.
@@ -5,16 +9,18 @@ F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes 
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for WeatherProrok.DAL.Migrations.ChangeFactWeatherUpdate: type is sealed.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for WeatherProrok.DAL.Migrations.ChangeForecast: type is sealed.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for WeatherProrok.DAL.Migrations.Configuration: type is sealed.
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for <>f__AnonymousType0`2: type is sealed.
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for <>f__AnonymousType1`6: type is sealed.
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for <>f__AnonymousType2`4: type is sealed.
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate stub for <>f__AnonymousType3`3: type is sealed.
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Migrations.Configuration: type is not visible to exported or assembly(WeatherProrok.DAL.Fakes).
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Model.IEntity: type is an interface.
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Repository.IBaseRepository`1: type is an interface.
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Repository.BaseRepository`1+<>c__DisplayClass0: type is not supported because of internal limitations.
-F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Repository.BaseRepository`1+<>c__DisplayClass2: type is not supported because of internal limitations.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for <>f__AnonymousType0`2: type is not supported because of internal limitations.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for <>f__AnonymousType1`6: type is not supported because of internal limitations.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for <>f__AnonymousType2`4: type is not supported because of internal limitations.
 F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for <>f__AnonymousType3`3: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Repository.BaseRepository`1+<>c__DisplayClass6_0: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Repository.BaseRepository`1+<>c__DisplayClass8_0: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Repository.IBaseRepository`1: type is an interface.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Model.IEntity: type is an interface.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Migrations.InitDB+<>c: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Migrations.AddKeys+<>c: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Migrations.ChangeFactWeather+<>c: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Migrations.ChangeFactWeather1+<>c: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Migrations.ChangeFactWeatherUpdate+<>c: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Migrations.ChangeForecast+<>c: type is not supported because of internal limitations.
+F:\Job\EuroSoft\WeatherProrok\WeatherProrok.Tests\Fakes\WeatherProrok.DAL.fakes : warning : Cannot generate shim for WeatherProrok.DAL.Migrations.Configuration: type is not visible to exported or assembly(WeatherProrok.DAL.Fakes).
